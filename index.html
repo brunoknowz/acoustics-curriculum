@@ -689,32 +689,67 @@
                                 </div>
 
                                 <div class="lesson-block concept">
-                                    <h3>🎨 Visual: Picture the Unit Circle</h3>
-                                    <p>Before we look at numbers, visualise this:</p>
-                                    <pre style="color: #6b9a85; background: #16161c; border: 1px solid #2a2a32; padding: 1.5rem; border-radius: 8px; text-align: center; margin: 1.5rem 0;">
-                         (90° / π/2)
-                         sin(θ) = 1
-                              ↑
-                              │
-                     ◆─────────◇─────────◆
-                     │        ╱│╲        │
-                     │       ╱ │ ╲       │
-        (180°/π)────◆───────●  │  ●─────◆──── (0°/0)  [3 o'clock]
-        sin = 0     │        ╲ │ ╱       │    sin = 0
-        cos = -1    │        ╲│╱        │    cos = 1
-                     │         ●         │    [Your starting point]
-                     ◆─────────◇─────────◆
-                              ↓
-                         (270° / 3π/2)
-                         sin(θ) = -1
+                                    <h3>🎨 Visual: The Unit Circle</h3>
+                                    <p>Before we look at numbers, visualise this. Every point on this circle can be described by just two coordinates: how far right (cosine) and how far up (sine):</p>
+                                    <svg viewBox="-1.5 -1.5 3 3" width="400" height="400" style="margin: 1.5rem auto; display: block; background: #16161c; border: 1px solid #2a2a32; border-radius: 8px; padding: 1rem;">
+                                        <!-- Grid and axes -->
+                                        <defs>
+                                            <style>
+                                                .grid-line { stroke: #2a2a32; stroke-width: 0.01; }
+                                                .axis { stroke: #5b8fa3; stroke-width: 0.02; }
+                                                .circle { stroke: #6b9a85; stroke-width: 0.03; fill: none; }
+                                                .radius-line { stroke: #9d8062; stroke-width: 0.02; stroke-dasharray: 0.05; }
+                                                .point { fill: #e8e8ec; }
+                                                .cardinal-point { fill: #5b8fa3; }
+                                                .example-point { fill: #9d8062; }
+                                                .angle-arc { stroke: #9d8062; stroke-width: 0.015; fill: none; }
+                                                .label { font-family: 'Monaco', 'Menlo', 'Courier New', monospace; font-size: 0.15px; fill: #d8d8dc; text-anchor: middle; }
+                                                .coord-label { font-family: 'Monaco', 'Menlo', 'Courier New', monospace; font-size: 0.12px; fill: #a8a8b0; }
+                                            </style>
+                                        </defs>
 
-Your position on the circle:  (x, y) = (cos(θ), sin(θ))
-At 0°: (1, 0) — far right
-At 90°: (0, 1) — far up
-At 180°: (-1, 0) — far left
-At 270°: (0, -1) — far down
-Every point on the circle: cos²(θ) + sin²(θ) = 1 (always!)
-                                    </pre>
+                                        <!-- Grid -->
+                                        <line x1="-1.3" y1="0" x2="1.3" y2="0" class="axis"/>
+                                        <line x1="0" y1="-1.3" x2="0" y2="1.3" class="axis"/>
+
+                                        <!-- Unit circle -->
+                                        <circle cx="0" cy="0" r="1" class="circle"/>
+
+                                        <!-- Cardinal points with labels -->
+                                        <!-- 0° / Right (3 o'clock) -->
+                                        <circle cx="1" cy="0" r="0.05" class="cardinal-point"/>
+                                        <text x="1.15" y="-0.1" class="label">0°</text>
+                                        <text x="1.15" y="0.15" class="coord-label">(1, 0)</text>
+
+                                        <!-- 90° / Top (12 o'clock) -->
+                                        <circle cx="0" cy="1" r="0.05" class="cardinal-point"/>
+                                        <text x="-0.15" y="1.2" class="label">90°</text>
+                                        <text x="-0.15" y="1.35" class="coord-label">(0, 1)</text>
+
+                                        <!-- 180° / Left (9 o'clock) -->
+                                        <circle cx="-1" cy="0" r="0.05" class="cardinal-point"/>
+                                        <text x="-1.15" y="-0.1" class="label">180°</text>
+                                        <text x="-1.2" y="0.15" class="coord-label">(-1, 0)</text>
+
+                                        <!-- 270° / Bottom (6 o'clock) -->
+                                        <circle cx="0" cy="-1" r="0.05" class="cardinal-point"/>
+                                        <text x="-0.15" y="-1.2" class="label">270°</text>
+                                        <text x="-0.15" y="-1.05" class="coord-label">(0, -1)</text>
+
+                                        <!-- 45° example point -->
+                                        <line x1="0" y1="0" x2="0.707" y2="0.707" class="radius-line"/>
+                                        <circle cx="0.707" cy="0.707" r="0.04" class="example-point"/>
+                                        <text x="0.85" y="0.75" class="label">45°</text>
+                                        <text x="0.85" y="0.9" class="coord-label">(0.707, 0.707)</text>
+
+                                        <!-- Axis labels -->
+                                        <text x="1.35" y="0.15" class="label" style="font-weight: bold;">cos(θ)</text>
+                                        <text x="-0.2" y="1.35" class="label" style="font-weight: bold;">sin(θ)</text>
+
+                                        <!-- Center point -->
+                                        <circle cx="0" cy="0" r="0.03" class="point"/>
+                                    </svg>
+                                    <p style="text-align: center; margin-top: 1rem; color: #a8a8b0; font-size: 0.95rem;"><strong>How to read this:</strong> Pick any angle. Draw a line from the centre to that angle on the circle. The x-coordinate (how far right) is cosine. The y-coordinate (how far up) is sine. The Pythagorean theorem guarantees: cos²(θ) + sin²(θ) = 1 always.</p>
                                 </div>
 
                                 <div class="lesson-block stepbystep">
@@ -804,46 +839,106 @@ Every point on the circle: cos²(θ) + sin²(θ) = 1 (always!)
                                     <p>Now that you understand conceptually, let's make a computer draw it for us. This is where Python comes in.</p>
                                     <p><strong>A note on the code below:</strong> If you haven't seen Python before, don't worry! The code below is just instructions we're giving to the computer: "Create 100 angles... calculate their coordinates... draw them as a circle... add labels." Each line is a small instruction. In Module 0.2, you'll learn how to install Python and run code like this. For now, just understand what this code is doing (the comments explain each line).</p>
                                     <p>This code creates a visual representation of exactly what we've been discussing:</p>
-                                    <pre>import matplotlib.pyplot as plt
-import numpy as np
+                                    <pre># ========== DRAWING THE UNIT CIRCLE IN PYTHON ==========
+# This code creates a visual representation of the unit circle
+# showing how sine and cosine give us the y and x coordinates
 
-# Create angles from 0 to 2π (full circle)
+# Import libraries: matplotlib for drawing, numpy for math
+import matplotlib.pyplot as plt  # pyplot: "plot" library for creating graphs/visualizations
+import numpy as np  # numpy: "numerical python" - handles arrays and math operations like sin/cos
+
+# STEP 1: CREATE 100 ANGLES AROUND THE CIRCLE
+# ============================================
+# We want to draw a smooth circle. To do that, we need lots of points.
+# np.linspace(start, end, number_of_points) creates evenly-spaced numbers
+# 0 to 2π (which equals 360°) with 100 points between them
+# Think of it as: "Give me 100 angles spread evenly around a full circle"
 theta = np.linspace(0, 2*np.pi, 100)
 
-# Get x and y coordinates (cosine and sine)
-x = np.cos(theta)
-y = np.sin(theta)
+# STEP 2: CALCULATE X AND Y COORDINATES FOR EACH ANGLE
+# ===================================================
+# Remember: on the unit circle, x = cos(θ) and y = sin(θ)
+# We're going to apply the cosine function to all 100 angles at once
+# This gives us 100 x-coordinates (one for each angle)
+x = np.cos(theta)  # x = cosine of each angle (how far right/left)
+y = np.sin(theta)  # y = sine of each angle (how far up/down)
+# Now we have two lists: one with 100 x-values, one with 100 y-values
 
-# Draw the circle
+# STEP 3: CREATE A BLANK FIGURE TO DRAW ON
+# ========================================
+# plt.figure() creates a new blank drawing surface
+# figsize=(8, 8) means the drawing will be 8 inches by 8 inches (square)
 plt.figure(figsize=(8, 8))
+
+# STEP 4: PLOT THE CIRCLE
+# =======================
+# plt.plot(x, y, ...) draws a line connecting all the points
+# 'b-' means: 'b' = blue color, '-' = solid line
+# linewidth=2 makes the line 2 pixels thick (thicker = easier to see)
+# label='Unit Circle' names this line (used in the legend)
 plt.plot(x, y, 'b-', linewidth=2, label='Unit Circle')
 
-# Mark the centre
+# STEP 5: MARK THE CENTRE POINT
+# =============================
+# The unit circle is centered at (0, 0) - the origin
+# 'ko' means: 'k' = black, 'o' = circle marker
+# markersize=8 makes the dot 8 pixels across
 plt.plot(0, 0, 'ko', markersize=8, label='Centre')
 
-# Mark the cardinal points
-plt.plot(1, 0, 'ro', markersize=8)  # 0°
-plt.plot(0, 1, 'go', markersize=8)  # 90°
-plt.plot(-1, 0, 'co', markersize=8) # 180°
-plt.plot(0, -1, 'mo', markersize=8) # 270°
+# STEP 6: MARK THE FOUR CARDINAL POINTS
+# =====================================
+# These are the special points: 0°, 90°, 180°, 270°
+# At 0°:   (1, 0)  - far right, same height as center - red dot
+# At 90°:  (0, 1)  - same distance from center, straight up - green dot
+# At 180°: (-1, 0) - far left, same height as center - cyan dot
+# At 270°: (0, -1) - same distance from center, straight down - magenta dot
+plt.plot(1, 0, 'ro', markersize=8)    # 'r' = red     (0° point)
+plt.plot(0, 1, 'go', markersize=8)    # 'g' = green   (90° point)
+plt.plot(-1, 0, 'co', markersize=8)   # 'c' = cyan    (180° point)
+plt.plot(0, -1, 'mo', markersize=8)   # 'm' = magenta (270° point)
 
-# Add a line to show the angle at 45°
+# STEP 7: SHOW A SPECIFIC ANGLE EXAMPLE (45°)
+# ===========================================
+# Let's mark the 45° angle to show how it works
+# π/4 radians = 45 degrees (converting from our formula: π/4 = π/4)
 angle_45 = np.pi/4
+
+# Draw a red dashed line from the center to the 45° point
+# [0, np.cos(angle_45)] means: x-coordinates from 0 to cos(45°)
+# [0, np.sin(angle_45)] means: y-coordinates from 0 to sin(45°)
+# This creates a line showing the radius at 45°
 plt.plot([0, np.cos(angle_45)], [0, np.sin(angle_45)], 'r--', linewidth=1.5)
+
+# Mark the 45° point with a red star
+# At 45°: cos(45°) ≈ 0.707 and sin(45°) ≈ 0.707
+# (the coordinates are equal at 45° because it's a 45° angle!)
 plt.plot(np.cos(angle_45), np.sin(angle_45), 'r*', markersize=15)
 
-# Labels and formatting
-plt.grid(True, alpha=0.3)
-plt.axis('equal')
-plt.axhline(y=0, color='k', linewidth=0.5)
-plt.axvline(x=0, color='k', linewidth=0.5)
-plt.xlabel('cos(θ)', fontsize=12)
-plt.ylabel('sin(θ)', fontsize=12)
+# STEP 8: FORMAT THE GRAPH
+# =======================
+plt.grid(True, alpha=0.3)      # Add a background grid (alpha=0.3 makes it faint)
+plt.axis('equal')              # Make x and y scales equal (so the circle looks round)
+plt.axhline(y=0, color='k', linewidth=0.5)  # Draw the horizontal axis (y=0 line)
+plt.axvline(x=0, color='k', linewidth=0.5)  # Draw the vertical axis (x=0 line)
+
+# STEP 9: ADD LABELS AND TITLE
+# ============================
+# These labels tell us what the axes represent
+plt.xlabel('cos(θ)', fontsize=12)  # Bottom axis = x-values = cosine values
+plt.ylabel('sin(θ)', fontsize=12)  # Left axis = y-values = sine values
 plt.title('The Unit Circle: Sine and Cosine as Coordinates', fontsize=14)
-plt.legend()
-plt.xlim(-1.5, 1.5)
-plt.ylim(-1.5, 1.5)
-plt.show()</pre>
+
+# STEP 10: SHOW LEGEND AND SET AXIS LIMITS
+# =======================================
+plt.legend()                   # Display the legend (labels we defined earlier)
+plt.xlim(-1.5, 1.5)            # Set x-axis to show from -1.5 to +1.5
+plt.ylim(-1.5, 1.5)            # Set y-axis to show from -1.5 to +1.5
+
+# STEP 11: DISPLAY THE RESULT
+# ===========================
+# This command opens a window and shows your drawing
+plt.show()
+# The window will stay open until you close it</pre>
                                     <p>Run this. You're drawing the unit circle. Every point on that circle has coordinates (cos(angle), sin(angle)). The x-axis is cosine, the y-axis is sine. The red dashed line shows the angle at 45°. The red star is where 45° intersects the circle—that point's coordinates are (0.707, 0.707) = (cos(45°), sin(45°)).</p>
                                 </div>
 
@@ -858,67 +953,167 @@ plt.show()</pre>
                                 </div>
 
                                 <div class="lesson-block concept">
-                                    <h3>🎨 Visual: What the Sine and Cosine Waves Look Like</h3>
-                                    <p>As you walk around the circle, your y-coordinate (sine) and x-coordinate (cosine) trace out waves:</p>
-                                    <pre style="color: #6b9a85; background: #16161c; border: 1px solid #2a2a32; padding: 1.5rem; border-radius: 8px; text-align: center; margin: 1.5rem 0;">
-Sine (blue) — your y-position as you go around the circle:
-     1 ╱╲
-       ╱  ╲        ╱╲
-      ╱    ╲      ╱  ╲        ← Starts at 0, peaks at 90°, back to 0 at 180°
-  ────●──────●────●────●──── 0
-      ╲    ╱      ╲  ╱
-       ╲  ╱        ╲╱
-    -1 ╱╲╱ ← 270°: sin = -1 (all the way down)
-    0°  90° 180° 270° 360°
+                                    <h3>🎨 Visual: Sine and Cosine Waves</h3>
+                                    <p>As you walk around the circle, your y-coordinate (sine) and x-coordinate (cosine) trace out waves. Notice they're identical shapes, just shifted:</p>
+                                    <svg viewBox="0 0 12 4" width="100%" height="300" style="margin: 1.5rem 0; background: #16161c; border: 1px solid #2a2a32; border-radius: 8px; padding: 0.5rem;">
+                                        <defs>
+                                            <style>
+                                                .wave-sine { stroke: #5b8fa3; stroke-width: 0.08; fill: none; }
+                                                .wave-cosine { stroke: #6b9a85; stroke-width: 0.08; fill: none; }
+                                                .wave-axis { stroke: #5b8fa3; stroke-width: 0.03; }
+                                                .wave-grid { stroke: #2a2a32; stroke-width: 0.01; }
+                                                .wave-label { font-family: 'Monaco', 'Menlo', 'Courier New', monospace; font-size: 0.2px; fill: #d8d8dc; }
+                                                .wave-angle { font-family: 'Monaco', 'Menlo', 'Courier New', monospace; font-size: 0.15px; fill: #a8a8b0; }
+                                            </style>
+                                        </defs>
 
-Cosine (red) — your x-position as you go around the circle:
-     1 ────●────────────●──── ← Starts at 1 (far right)
-         ╱  ╲          ╱  ╲
-        ╱    ╲        ╱    ╲
-   ────●──────●──────●──────●────
-        ╲    ╱        ╲    ╱
-         ╲  ╱ ← 180°: cos = -1 ╲  ╱
-       -1 ╱╲╱  (far left)      ╲╱
-    0°  90° 180° 270° 360°
+                                        <!-- Background grid -->
+                                        <line x1="0" y1="2" x2="12" y2="2" class="wave-axis"/>
+                                        <line x1="0" y1="1" x2="12" y2="1" class="wave-grid"/>
+                                        <line x1="0" y1="3" x2="12" y2="3" class="wave-grid"/>
 
-NOTICE: They're the same wave shape, but cosine is shifted left by 90°.
-This 90° (or π/2 radian) shift is called "phase difference".
-In acoustics, phase differences are HUGE because they determine whether waves
-reinforce each other (constructive) or cancel out (destructive).
-                                    </pre>
+                                        <!-- Vertical grid at key angles -->
+                                        <line x1="3" y1="0.5" x2="3" y2="3.5" class="wave-grid"/>
+                                        <line x1="6" y1="0.5" x2="6" y2="3.5" class="wave-grid"/>
+                                        <line x1="9" y1="0.5" x2="9" y2="3.5" class="wave-grid"/>
+
+                                        <!-- Sine wave (starts at 0) -->
+                                        <path d="M 0 2 Q 1.5 1 3 2 T 6 2 T 9 2 T 12 2" class="wave-sine" stroke-dasharray="0.15"/>
+
+                                        <!-- Cosine wave (starts at 1, offset to the left by 90°) -->
+                                        <path d="M 0 1 Q 1.5 2 3 3 T 6 1 T 9 3 T 12 1" class="wave-cosine"/>
+
+                                        <!-- Angle labels -->
+                                        <text x="0" y="3.7" class="wave-angle">0°</text>
+                                        <text x="3" y="3.7" class="wave-angle">90°</text>
+                                        <text x="6" y="3.7" class="wave-angle">180°</text>
+                                        <text x="9" y="3.7" class="wave-angle">270°</text>
+                                        <text x="12" y="3.7" class="wave-angle">360°</text>
+
+                                        <!-- Value labels -->
+                                        <text x="-0.5" y="2.3" class="wave-label">0</text>
+                                        <text x="-0.5" y="1.3" class="wave-label">+1</text>
+                                        <text x="-0.5" y="3.3" class="wave-label">−1</text>
+
+                                        <!-- Legend -->
+                                        <line x1="1" y1="0.2" x2="1.5" y2="0.2" class="wave-sine" stroke-dasharray="0.15"/>
+                                        <text x="1.8" y="0.4" class="wave-label" style="font-size: 0.18px;">sin(θ) — dashed</text>
+
+                                        <line x1="1" y1="0.6" x2="1.5" y2="0.6" class="wave-cosine"/>
+                                        <text x="1.8" y="0.8" class="wave-label" style="font-size: 0.18px;">cos(θ) — solid</text>
+
+                                        <!-- Phase shift indicator -->
+                                        <g>
+                                            <path d="M 1.5 2 L 1.5 1.4" stroke="#9d8062" stroke-width="0.05" marker-end="url(#arrowhead)"/>
+                                            <text x="1.8" y="1.5" class="wave-label" style="font-size: 0.14px; fill: #9d8062;">90° shift</text>
+                                        </g>
+                                    </svg>
+                                    <p style="text-align: center; margin-top: 0.5rem; color: #a8a8b0; font-size: 0.95rem;"><strong>Key insight:</strong> Sine starts at 0. Cosine starts at 1. They're the same wave, but cosine is shifted 90° to the left (or 1/4 of a cycle earlier). This 90° phase shift is called "quadrature"—it appears constantly in acoustics and signal processing.</p>
                                 </div>
 
                                 <div class="lesson-block stepbystep">
                                     <h3>🔧 Visualise Sin and Cos Changing</h3>
                                     <p>Let's show how sine and cosine change as you rotate around the circle with code:</p>
-                                    <pre>import matplotlib.pyplot as plt
-import numpy as np
+                                    <pre># ========== PLOTTING SINE AND COSINE WAVES ==========
+# This code shows how sine and cosine values change as angles increase
+# Instead of showing positions on a circle, we'll plot them as waves
+# This reveals their phase difference visually
 
-# Create a range of angles
+import matplotlib.pyplot as plt  # For drawing graphs
+import numpy as np              # For math functions like sin() and cos()
+
+# STEP 1: CREATE A RANGE OF ANGLES FROM 0 TO 2π
+# ============================================
+# We want to plot sine and cosine for many angles
+# np.linspace(0, 2*np.pi, 200) creates 200 evenly-spaced angles
+# from 0 to 2π (a full rotation around the circle)
+# More points = smoother curve
 theta = np.linspace(0, 2*np.pi, 200)
 
-# Calculate sine and cosine
+# STEP 2: CALCULATE SINE VALUES FOR ALL 200 ANGLES
+# ================================================
+# np.sin() applies the sine function to each angle
+# Result: a list of 200 sine values (one for each angle)
+# These values oscillate between -1 and +1
 sine_values = np.sin(theta)
+
+# STEP 3: CALCULATE COSINE VALUES FOR ALL 200 ANGLES
+# =================================================
+# np.cos() applies the cosine function to each angle
+# Result: a list of 200 cosine values
+# These also oscillate between -1 and +1, but at different times
 cosine_values = np.cos(theta)
 
-# Plot both on the same graph
+# STEP 4: CREATE A FIGURE (BLANK DRAWING AREA)
+# ============================================
+# figsize=(12, 5) means: 12 inches wide, 5 inches tall
+# A wide, short rectangle is good for showing waves over time/angle
 plt.figure(figsize=(12, 5))
+
+# STEP 5: PLOT THE SINE WAVE
+# ==========================
+# plt.plot(x_values, y_values, 'format', ...)
+# theta = our x-axis (the angles: 0 to 2π)
+# sine_values = our y-axis (the sine values: what we calculated)
+# 'b-' means: 'b' = blue color, '-' = solid line
+# linewidth=2 makes the line thick enough to see clearly
+# label='sin(θ)' gives this curve a name (shown in legend)
 plt.plot(theta, sine_values, 'b-', linewidth=2, label='sin(θ)')
+
+# STEP 6: PLOT THE COSINE WAVE ON THE SAME GRAPH
+# ============================================
+# This plots cosine with the same angles, but on top of the sine wave
+# 'r-' means: 'r' = red color, '-' = solid line
+# Now we can see how sine and cosine compare side-by-side
 plt.plot(theta, cosine_values, 'r-', linewidth=2, label='cos(θ)')
 
-# Mark key angles
+# STEP 7: MARK THE KEY ANGLES WITH LABELS
+# ========================================
+# The x-axis currently shows numbers like 0, 1, 2, 3, 4, 5, 6...
+# But we want to show angles in terms of π (pi)
+# pi_vals = the actual numbers (where π/2 = 1.57, π = 3.14, etc.)
 pi_vals = [0, np.pi/2, np.pi, 3*np.pi/2, 2*np.pi]
+# pi_labels = what we want to display (π/2, π, etc.)
 pi_labels = ['0', 'π/2', 'π', '3π/2', '2π']
+# This replaces the number labels with the π labels
 plt.xticks(pi_vals, pi_labels)
 
-plt.grid(True, alpha=0.3)
-plt.axhline(y=0, color='k', linewidth=0.5)
-plt.xlabel('Angle (radians)', fontsize=12)
-plt.ylabel('Value', fontsize=12)
+# STEP 8: FORMAT THE GRAPH
+# =======================
+plt.grid(True, alpha=0.3)        # Add grid lines (faint, alpha=0.3)
+plt.axhline(y=0, color='k', linewidth=0.5)  # Add a line at y=0 (the middle)
+
+# STEP 9: ADD LABELS AND TITLE
+# ============================
+# These labels explain what the axes represent
+plt.xlabel('Angle (radians)', fontsize=12)  # Bottom axis = angles, from 0 to 2π
+plt.ylabel('Value', fontsize=12)            # Left axis = sine/cosine values, from -1 to +1
 plt.title('Sine and Cosine as You Rotate Around the Circle', fontsize=14)
+
+# STEP 10: SHOW THE LEGEND
+# =======================
+# This displays a box showing which color is sin and which is cos
+# (We defined these with the 'label=' parameter above)
 plt.legend(fontsize=12)
+
+# STEP 11: SET THE Y-AXIS LIMITS
+# ==============================
+# plt.ylim(-1.5, 1.5) makes sure the graph shows from -1.5 to +1.5
+# This gives us space to see the full wave (-1 to +1)
+# plus a little breathing room
 plt.ylim(-1.5, 1.5)
-plt.show()</pre>
+
+# STEP 12: DISPLAY THE RESULT
+# ===========================
+# This opens a window and shows your graph
+plt.show()
+
+# WHAT TO LOOK FOR:
+# - Blue (sine) starts at 0, goes up to +1 at π/2, back down to 0 at π
+# - Red (cosine) starts at +1, goes down to 0 at π/2, to -1 at π
+# - They're the same shape, but shifted: cosine is 90° (π/2) ahead of sine
+# - This is the "quadrature" or "phase shift" we talked about!
+</pre>
                                     <p>When you run this, you see two waves. The blue one is sine. The red one is cosine. They're the same shape, just shifted 90° (π/2 radians) apart. This shift is the phase difference. At 0°, sine is 0 and cosine is 1. At 90°, sine is 1 and cosine is 0. They're out of phase.</p>
                                 </div>
 
@@ -1015,65 +1210,82 @@ plt.show()</pre>
 
                                 <div class="lesson-block concept">
                                     <h3>🎨 Visual: Constructive, Destructive, and Beat Interference</h3>
-                                    <p>Here's what these three interference patterns look like as waves:</p>
-                                    <pre style="color: #6b9a85; background: #16161c; border: 1px solid #2a2a32; padding: 1.5rem; border-radius: 8px; text-align: center; margin: 1.5rem 0;">
-CONSTRUCTIVE INTERFERENCE (Phase difference = 0°)
-Crests meet crests, troughs meet troughs → AMPLIFIED
+                                    <p>Here's what happens when two waves meet. The result depends entirely on their phase relationship:</p>
 
-Wave 1:  ╱╲    ╱╲    ╱╲
-        ╱  ╲  ╱  ╲  ╱  ╲
-───────●────●──●────●────●──
-        ╲  ╱  ╲  ╱  ╲  ╱
-        ╲╱    ╲╱    ╲╱
+                                    <!-- Constructive Interference -->
+                                    <div style="margin: 1.5rem 0; padding: 1rem; background: #1a1a21; border-left: 4px solid #5b8fa3; border-radius: 6px;">
+                                        <h4 style="color: #5b8fa3; margin-top: 0;">Constructive Interference (Phase difference = 0°)</h4>
+                                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Crests meet crests, troughs meet troughs → <strong>AMPLIFIED (twice as loud)</strong></p>
+                                        <svg viewBox="0 0 12 3" width="100%" height="180" style="background: #16161c; border: 1px solid #2a2a32; border-radius: 6px;">
+                                            <defs><style>
+                                                .interf-wave1 { stroke: #5b8fa3; stroke-width: 0.08; fill: none; }
+                                                .interf-wave2 { stroke: #6b9a85; stroke-width: 0.08; fill: none; opacity: 0.6; }
+                                                .interf-sum { stroke: #9d8062; stroke-width: 0.12; fill: none; }
+                                                .interf-axis { stroke: #5b8fa3; stroke-width: 0.03; }
+                                            </style></defs>
+                                            <line x1="0" y1="1" x2="12" y2="1" class="interf-axis"/>
+                                            <line x1="0" y1="2" x2="12" y2="2" class="interf-axis"/>
+                                            <!-- Wave 1 -->
+                                            <path d="M 0 1 Q 1.5 0.5 3 1 T 6 1 T 9 1 T 12 1" class="interf-wave1"/>
+                                            <!-- Wave 2 (same phase) -->
+                                            <path d="M 0 2 Q 1.5 1.5 3 2 T 6 2 T 9 2 T 12 2" class="interf-wave2"/>
+                                            <!-- Sum (twice as tall) -->
+                                            <path d="M 0 1.5 Q 1.5 0 3 1.5 T 6 1.5 T 9 1.5 T 12 1.5" class="interf-sum"/>
+                                            <text x="0.2" y="0.3" style="font-size: 0.15px; fill: #d8d8dc;">Wave 1</text>
+                                            <text x="0.2" y="2.8" style="font-size: 0.15px; fill: #d8d8dc;">Wave 2</text>
+                                            <text x="0.2" y="1.2" style="font-size: 0.15px; fill: #9d8062;">Sum</text>
+                                        </svg>
+                                    </div>
 
-Wave 2:  ╱╲    ╱╲    ╱╲
-        ╱  ╲  ╱  ╲  ╱  ╲
-───────●────●──●────●────●──
-        ╲  ╱  ╲  ╱  ╲  ╱
-        ╲╱    ╲╱    ╲╱
+                                    <!-- Destructive Interference -->
+                                    <div style="margin: 1.5rem 0; padding: 1rem; background: #1a1a21; border-left: 4px solid #6b9a85; border-radius: 6px;">
+                                        <h4 style="color: #6b9a85; margin-top: 0;">Destructive Interference (Phase difference = 180°)</h4>
+                                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Crests meet troughs → <strong>CANCELLATION (silence!)</strong></p>
+                                        <svg viewBox="0 0 12 3" width="100%" height="180" style="background: #16161c; border: 1px solid #2a2a32; border-radius: 6px;">
+                                            <defs><style>
+                                                .interf-wave1 { stroke: #5b8fa3; stroke-width: 0.08; fill: none; }
+                                                .interf-wave2 { stroke: #6b9a85; stroke-width: 0.08; fill: none; opacity: 0.6; }
+                                                .interf-sum { stroke: #9d8062; stroke-width: 0.12; fill: none; }
+                                                .interf-axis { stroke: #5b8fa3; stroke-width: 0.03; }
+                                            </style></defs>
+                                            <line x1="0" y1="1" x2="12" y2="1" class="interf-axis"/>
+                                            <!-- Wave 1 -->
+                                            <path d="M 0 1 Q 1.5 0.5 3 1 T 6 1 T 9 1 T 12 1" class="interf-wave1"/>
+                                            <!-- Wave 2 (inverted) -->
+                                            <path d="M 0 1 Q 1.5 1.5 3 1 T 6 1 T 9 1 T 12 1" class="interf-wave2"/>
+                                            <!-- Sum (flat line) -->
+                                            <line x1="0" y1="1" x2="12" y2="1" class="interf-sum"/>
+                                            <text x="0.2" y="0.3" style="font-size: 0.15px; fill: #d8d8dc;">Wave 1</text>
+                                            <text x="0.2" y="2.8" style="font-size: 0.15px; fill: #d8d8dc;">Wave 2 (inverted)</text>
+                                            <text x="0.2" y="1.3" style="font-size: 0.15px; fill: #9d8062;">Sum = ZERO</text>
+                                        </svg>
+                                    </div>
 
-Sum:     ╱╲╲  ╱╲╲  ╱╲╲
-        ╱  ╲╱╲╱  ╲╱╲╱  ╲  → TWICE as tall!
-───────●──────●──────●────
-        ╲  ╱╲╱  ╲╱╲  ╲╱
-        ╲╱╱ ╱  ╲╱ ╱ ╱
-
-
-DESTRUCTIVE INTERFERENCE (Phase difference = 180°)
-Crests meet troughs → CANCELLATION
-
-Wave 1:  ╱╲    ╱╲
-        ╱  ╲  ╱  ╲
-───────●────●──●────●────
-        ╲  ╱  ╲  ╱
-        ╲╱    ╲╱
-
-Wave 2:  ╲╱    ╲╱
-        ╱  ╲  ╱  ╲  (inverted)
-───────●────●──●────●────
-        ╲  ╱  ╲  ╱
-        ╱╲    ╱╲
-
-Sum:    ───────●────●──●────●── → FLAT LINE (silence!)
-
-
-BEATS (Phase difference changes slowly over time)
-Wave 1 (440 Hz):     ~~~~~~~~~
-Wave 2 (442 Hz):    ~~~~~~~~~~ (slightly faster)
-
-At time t=0: in phase → loud
-At time t=0.25s: out of phase → quiet
-At time t=0.5s: in phase again → loud
-
-Result:  ╱╲      ╱╲      ╱╲
-        ╱  ╲    ╱  ╲    ╱  ╲
-───────●────●──●──────●──────●──
-       ╲  ╱    ╲  ╱    ╲  ╱
-        ╲╱      ╲╱      ╲╱
-
-You hear: "woom... woom... woom..." (wobbling effect) at 2 Hz beat frequency
-The audio frequency is 441 Hz, but loudness wobbles 2 times per second.
-                                    </pre>
+                                    <!-- Beats -->
+                                    <div style="margin: 1.5rem 0; padding: 1rem; background: #1a1a21; border-left: 4px solid #9d8062; border-radius: 6px;">
+                                        <h4 style="color: #9d8062; margin-top: 0;">Beats (Phase difference changes over time)</h4>
+                                        <p style="font-size: 0.9rem; margin-bottom: 1rem;">When two waves have slightly different frequencies, they drift in and out of phase → <strong>WOBBLING (gets louder and quieter)</strong></p>
+                                        <svg viewBox="0 0 12 4" width="100%" height="220" style="background: #16161c; border: 1px solid #2a2a32; border-radius: 6px;">
+                                            <defs><style>
+                                                .beat-wave1 { stroke: #5b8fa3; stroke-width: 0.06; fill: none; opacity: 0.5; }
+                                                .beat-wave2 { stroke: #6b9a85; stroke-width: 0.06; fill: none; opacity: 0.5; }
+                                                .beat-sum { stroke: #9d8062; stroke-width: 0.1; fill: none; }
+                                                .beat-envelope { stroke: #d8a08a; stroke-width: 0.08; fill: none; stroke-dasharray: 0.1; opacity: 0.7; }
+                                                .beat-axis { stroke: #5b8fa3; stroke-width: 0.02; }
+                                            </style></defs>
+                                            <line x1="0" y1="2" x2="12" y2="2" class="beat-axis"/>
+                                            <!-- Wave 1: 440 Hz -->
+                                            <path d="M 0 2 Q 0.3 1.8 0.6 2 T 1.2 2 T 1.8 2 T 2.4 2 T 3 2 T 3.6 2 T 4.2 2 T 4.8 2 T 5.4 2 T 6 2 T 6.6 2 T 7.2 2 T 7.8 2 T 8.4 2 T 9 2 T 9.6 2 T 10.2 2 T 10.8 2 T 11.4 2 T 12 2" class="beat-wave1"/>
+                                            <!-- Wave 2: 442 Hz (slightly faster) -->
+                                            <path d="M 0 2 Q 0.29 1.8 0.58 2 T 1.16 2 T 1.74 2 T 2.32 2 T 2.9 2 T 3.48 2 T 4.06 2 T 4.64 2 T 5.22 2 T 5.8 2 T 6.38 2 T 6.96 2 T 7.54 2 T 8.12 2 T 8.7 2 T 9.28 2 T 9.86 2 T 10.44 2 T 11.02 2 T 11.6 2 T 12 2" class="beat-wave2"/>
+                                            <!-- Sum with beat envelope -->
+                                            <path d="M 0 2 Q 0.3 1.4 0.6 2 Q 0.9 2.6 1.2 2 Q 1.5 1.2 1.8 2 Q 2.1 2.8 2.4 2 Q 2.7 1.1 3 2 T 6 2 T 9 2 T 12 2" class="beat-sum"/>
+                                            <!-- Envelope showing amplitude modulation -->
+                                            <path d="M 0 2 Q 3 0.8 6 2 Q 9 3.2 12 2" class="beat-envelope"/>
+                                            <path d="M 0 2 Q 3 3.2 6 2 Q 9 0.8 12 2" class="beat-envelope"/>
+                                            <text x="0.2" y="3.5" style="font-size: 0.15px; fill: #d8d8dc;">440 Hz + 442 Hz = 441 Hz tone with 2 Hz wobble</text>
+                                        </svg>
+                                    </div>
                                 </div>
 
                                 <div class="lesson-block stepbystep">
@@ -1087,40 +1299,126 @@ The audio frequency is 441 Hz, but loudness wobbles 2 times per second.
                                         <li><strong>Plot it:</strong> Show what the interference looks like visually</li>
                                     </ol>
                                     <p>Don't worry about every line of code right now. Focus on the overall logic: create waves → add them → save the result. If this is your first time seeing Python, Module 0.2 will teach you step-by-step.</p>
-                                    <pre>import numpy as np
-from scipy.io import wavfile
-import matplotlib.pyplot as plt
+                                    <pre># ========== CREATING BEAT INTERFERENCE IN PYTHON ==========
+# This code generates two slightly different frequencies,
+# combines them, and creates an audio file you can listen to
+# You'll hear the wobbling beat effect in action!
 
-# Parameters
-sr = 44100          # Sample rate (44.1 kHz)
-duration = 5        # 5 seconds
+import numpy as np                  # For math: sin, arrays
+from scipy.io import wavfile        # For saving .wav audio files
+import matplotlib.pyplot as plt     # For plotting the waveform
+
+# ============ SECTION 1: SET UP THE AUDIO PARAMETERS ============
+# These parameters define how we'll create the audio
+
+sr = 44100  # Sample rate: 44,100 samples per second
+            # This is CD-quality audio. Each second of sound has 44,100 discrete values
+            # Higher sample rate = more accurate representation of the sound
+
+duration = 5  # Create 5 seconds of audio
+              # You'll hear about 10 beats in this time (2 Hz × 5 seconds)
+
+# Create a time array: "at what times do we generate samples?"
+# np.linspace(0, 5, 220500) creates 220,500 evenly-spaced times
+# from 0 to 5 seconds (44,100 samples/second × 5 seconds = 220,500 total samples)
 t = np.linspace(0, duration, int(sr * duration))
 
-# Two close frequencies
-f1 = 440            # A note
-f2 = 442            # 2 Hz higher
+# ============ SECTION 2: DEFINE THE FREQUENCIES ============
+# These are the two frequencies that will interfere
 
-# Generate the two waves
+f1 = 440  # First frequency: 440 Hz (the musical note A)
+          # This is the standard pitch used to tune pianos and orchestras
+
+f2 = 442  # Second frequency: 442 Hz (2 Hz higher)
+          # Only 2 Hz difference, so we'll hear them as one tone with wobbling
+
+# Beat frequency will be: |f2 - f1| = |442 - 440| = 2 Hz
+# This means we'll hear the sound get louder and quieter twice per second
+
+# ============ SECTION 3: GENERATE THE TWO WAVES ============
+# Now we create the actual waveforms using the sine function
+
+# wave1 = 0.3 * sin(2π × 440 × t)
+# Let's break this down:
+# - The 0.3 is the amplitude (volume). 0.3 means 30% of maximum volume
+# - 2π converts from frequency (Hz) to angular velocity (radians/second)
+# - f1 is our frequency (440)
+# - t is the time array (all 220,500 time points)
+# - sin() creates the oscillation
+# The result is a 440 Hz sine wave at 30% volume
 wave1 = 0.3 * np.sin(2 * np.pi * f1 * t)
+
+# wave2 = 0.3 * sin(2π × 442 × t)
+# Same process, but with f2 = 442 Hz
+# This wave oscillates slightly faster than wave1
+# They start in sync, but gradually drift out of sync, then back in sync
+# This drift is what creates the beat!
 wave2 = 0.3 * np.sin(2 * np.pi * f2 * t)
 
-# Sum them (superposition)
+# ============ SECTION 4: ADD THE WAVES (SUPERPOSITION) ============
+# This is where the magic happens: we add the two waves together
+# According to superposition rule: total displacement = sum of individual displacements
+
 combined = wave1 + wave2
+# At each time point, the combined wave is the sum of wave1 and wave2
+# When the waves are in phase (peaks align), combined amplitude = 0.6 (loud!)
+# When out of phase (peak meets trough), combined amplitude ≈ 0 (quiet!)
+# This creates the wobbling sound
 
-# Save as audio file
-wavfile.write('beats.wav', sr, (combined * 32767).astype(np.int16))
-print(f"Beat frequency: {f2 - f1} Hz")
-print(f"Expected wobble: {f2 - f1} wobbles per second")
+# ============ SECTION 5: SAVE THE AUDIO FILE ============
+# Now we save this to a .wav file so you can listen to it
 
-# Plot the first 0.5 seconds to see the beat envelope
+wavfile.write('beats.wav',                                    # Filename
+              sr,                                             # Sample rate (44,100)
+              (combined * 32767).astype(np.int16))           # Audio data converted to 16-bit integer format
+# Note: .wav files store audio as integers, not decimals
+# We multiply by 32767 because 16-bit integers range from -32768 to +32767
+
+# ============ SECTION 6: PRINT INFORMATION ============
+# Let the user know what beat frequency to expect
+
+print(f"Beat frequency: {f2 - f1} Hz")  # This will print "Beat frequency: 2 Hz"
+print(f"Expected wobble: {f2 - f1} wobbles per second")  # "Expected wobble: 2 wobbles per second"
+
+# ============ SECTION 7: VISUALIZE THE FIRST 0.5 SECONDS ============
+# We'll plot the waveform so you can SEE the beat envelope
+
+# How many samples make up 0.5 seconds?
+# If we have 44,100 samples per second, then:
+# 0.5 seconds × 44,100 = 22,050 samples
 plot_samples = int(sr * 0.5)
-plt.figure(figsize=(12, 4))
+
+# Create a figure (blank drawing area)
+plt.figure(figsize=(12, 4))  # 12 inches wide, 4 inches tall
+
+# Plot only the first 0.5 seconds (first 22,050 samples)
+# t[:plot_samples] = time values for first 22,050 samples
+# combined[:plot_samples] = amplitude values for first 22,050 samples
 plt.plot(t[:plot_samples], combined[:plot_samples], linewidth=1)
+
+# Add labels and title
 plt.xlabel('Time (seconds)')
 plt.ylabel('Amplitude')
 plt.title('Beats: 440 Hz + 442 Hz (2 Hz beat frequency)')
 plt.grid(True, alpha=0.3)
-plt.show()</pre>
+
+# Display the graph
+plt.show()
+
+# ============ WHAT YOU'LL OBSERVE ============
+# When you run this and look at the graph:
+# - You'll see a FAST oscillation (the carrier frequency: ~441 Hz average)
+# - You'll see a SLOW envelope (the amplitude getting louder/quieter: 2 Hz)
+# - The envelope looks like it's "modulating" the fast oscillation
+# - This is called "amplitude modulation"
+#
+# When you listen to beats.wav:
+# - You'll hear a steady tone (around 441 Hz)
+# - But the loudness will wobble: loud... quiet... loud... quiet...
+# - At 2 Hz, you'll experience this wobble twice per second
+# - It sounds like someone is turning a volume knob on and off
+# - This is how musicians tune instruments: adjust until beats disappear!
+</pre>
                                     <p>Save this as a Python script and run it. It creates a .wav file called "beats.wav". Listen to it—you'll hear a tone that wobbles in and out (quieter, louder, quieter, etc.) twice per second. Open beats.wav in Audacity and look at the waveform. You'll see the amplitude modulation (the envelope) clearly.</p>
                                     <p>The graph shows the first half second. Notice how the wave amplitude rises and falls—that's the beat envelope. The rapid oscillations inside are the carrier frequency (around 441 Hz, the average of 440 and 442). The slow wobbling is the beat frequency (2 Hz).</p>
                                 </div>
@@ -1128,47 +1426,148 @@ plt.show()</pre>
                                 <div class="lesson-block stepbystep">
                                     <h3>🔧 Constructive vs. Destructive: Generate Examples</h3>
                                     <p>Now let's create three .wav files that clearly show the difference between constructive, destructive, and partial interference. You'll actually hear how different they are:</p>
-                                    <pre>import numpy as np
-from scipy.io import wavfile
+                                    <pre># ========== DEMONSTRATING PHASE INTERFERENCE ==========
+# This code shows how phase difference affects wave interference
+# We'll create three separate audio files so you can hear the difference!
 
-sr = 44100
-duration = 2
+import numpy as np              # Math functions
+from scipy.io import wavfile    # Saving .wav files
+
+# ============ AUDIO PARAMETERS ============
+sr = 44100  # 44.1 kHz sample rate (CD quality)
+duration = 2  # 2 seconds of audio
 t = np.linspace(0, duration, int(sr * duration))
-f = 440             # Both waves at same frequency (440 Hz)
 
-# Amplitude for each wave
-A = 0.3
+f = 440  # Both waves at the SAME frequency (440 Hz)
+         # This is important: we're testing phase difference, not frequency difference
 
-# Base wave (the first speaker)
+# ============ AMPLITUDE ============
+A = 0.3  # Amplitude: volume level (30% of maximum)
+         # Each individual wave has amplitude A
+         # If constructive: combined amplitude = 2A (twice as loud!)
+         # If destructive: combined amplitude = 0 (silent!)
+
+# ============ THE BASE WAVE ============
+# This represents the first speaker playing 440 Hz
 wave1 = A * np.sin(2 * np.pi * f * t)
 
-# Case 1: Constructive (phase difference = 0)
-wave2_constructive = A * np.sin(2 * np.pi * f * t)  # Same phase
+# ================================================================
+# CASE 1: CONSTRUCTIVE INTERFERENCE (Phase difference = 0°)
+# ================================================================
+# Two waves with the SAME phase arrive together
+# Peaks meet peaks, troughs meet troughs
+# Result: AMPLIFICATION! The sound gets twice as loud
+
+print("\n=== CASE 1: CONSTRUCTIVE INTERFERENCE ===")
+print("Phase difference = 0° (waves perfectly aligned)")
+
+# wave2_constructive has the exact same phase as wave1
+# No phase offset (the "+ 0" part is implicit)
+wave2_constructive = A * np.sin(2 * np.pi * f * t)  # Exact same as wave1
+
+# Add them together
 combined_constructive = wave1 + wave2_constructive
+# Result: amplitude = A + A = 2A (twice as loud)
+
+# Save to file
 wavfile.write('constructive.wav', sr, (combined_constructive * 32767).astype(np.int16))
-print("Constructive: amplitude = 2A, twice as loud")
+print("✓ Saved: constructive.wav (should sound LOUD and clear)")
+print("  Expected amplitude: ~0.6 (since A + A = 0.3 + 0.3)")
 
-# Case 2: Destructive (phase difference = π)
-wave2_destructive = A * np.sin(2 * np.pi * f * t + np.pi)  # Opposite phase
+# ================================================================
+# CASE 2: DESTRUCTIVE INTERFERENCE (Phase difference = 180° = π)
+# ================================================================
+# Two waves with OPPOSITE phases: one is inverted
+# When peak from wave1 arrives, trough from wave2 arrives
+# Result: CANCELLATION! They destroy each other, creating silence
+
+print("\n=== CASE 2: DESTRUCTIVE INTERFERENCE ===")
+print("Phase difference = 180° (waves completely inverted)")
+
+# wave2_destructive is shifted by π (180°)
+# The "+ np.pi" adds a phase offset of π radians
+# sin(x + π) = -sin(x), so this is just the inverted wave
+wave2_destructive = A * np.sin(2 * np.pi * f * t + np.pi)  # Offset by π
+
+# Add them together
 combined_destructive = wave1 + wave2_destructive
+# Result: amplitude ≈ 0 (complete cancellation!)
+# Mathematically: sin(x) + sin(x + π) = sin(x) - sin(x) = 0
+
+# Save to file
 wavfile.write('destructive.wav', sr, (combined_destructive * 32767).astype(np.int16))
-print("Destructive: amplitude = 0, silence")
+print("✓ Saved: destructive.wav (should sound nearly SILENT)")
+print("  Expected amplitude: ~0 (they cancel out)")
 
-# Case 3: Partial (phase difference = π/4)
-wave2_partial = A * np.sin(2 * np.pi * f * t + np.pi/4)
+# ================================================================
+# CASE 3: PARTIAL INTERFERENCE (Phase difference = 45° = π/4)
+# ================================================================
+# Two waves with a partial phase difference
+# They're neither perfectly aligned nor perfectly inverted
+# Result: SOMETHING IN BETWEEN (louder than silent, quieter than double)
+
+print("\n=== CASE 3: PARTIAL INTERFERENCE ===")
+print("Phase difference = 45° (partially aligned)")
+
+# wave2_partial is shifted by π/4 (45° = 1/8 of a full circle)
+# This creates partial alignment
+wave2_partial = A * np.sin(2 * np.pi * f * t + np.pi/4)  # Offset by π/4
+
+# Add them together
 combined_partial = wave1 + wave2_partial
-wavfile.write('partial.wav', sr, (combined_partial * 32767).astype(np.int16))
-print("Partial (π/4 phase offset): in between")
+# Result: amplitude is somewhere between 0 and 2A
+# How much overlap depends on the phase difference
+# At π/4, we get A * sqrt(2) ≈ 0.42 (about 70% of the constructive case)
 
-# Let's verify the amplitudes
+# Save to file
+wavfile.write('partial.wav', sr, (combined_partial * 32767).astype(np.int16))
+print("✓ Saved: partial.wav (should sound medium-loud)")
+print("  Expected amplitude: ~0.42 (between 0 and 0.6)")
+
+# ================================================================
+# VERIFICATION: MEASURE THE ACTUAL AMPLITUDES
+# ================================================================
+# Let's check that our theory matches reality!
+
+print("\n=== AMPLITUDE MEASUREMENTS ===")
+
+# np.abs() takes absolute value (converts negative values to positive)
+# np.max() finds the largest value in the array
+# This tells us the peak amplitude of each combined wave
+
 amp_constructive = np.max(np.abs(combined_constructive))
 amp_destructive = np.max(np.abs(combined_destructive))
 amp_partial = np.max(np.abs(combined_partial))
 
-print(f"\nAmplitude results:")
-print(f"Constructive: {amp_constructive:.3f} (should be ~{2*A:.3f})")
-print(f"Destructive: {amp_destructive:.6f} (should be ~0)")
-print(f"Partial: {amp_partial:.3f} (should be between 0 and {2*A:.3f})")</pre>
+print(f"\nConstructive interference:")
+print(f"  Measured amplitude: {amp_constructive:.3f}")
+print(f"  Expected (2A):      {2*A:.3f}")
+print(f"  ✓ Match! (Two waves add completely)")
+
+print(f"\nDestructive interference:")
+print(f"  Measured amplitude: {amp_destructive:.6f}")
+print(f"  Expected (0):       0.000000")
+print(f"  ✓ Match! (Waves cancel completely)")
+
+print(f"\nPartial interference (π/4 phase):")
+print(f"  Measured amplitude: {amp_partial:.3f}")
+print(f"  Expected (A√2):     {A*np.sqrt(2):.3f}")
+print(f"  ✓ Match! (Partial cancellation/reinforcement)")
+
+# ================================================================
+# HOW TO USE THESE FILES
+# ================================================================
+# Now listen to all three files in order:
+# 1. constructive.wav — This should sound LOUD, clear, undistorted
+# 2. destructive.wav — This should sound SILENT (nearly inaudible)
+# 3. partial.wav — This should sound in between
+#
+# This is your ears learning what phase differences sound like!
+# This principle is used in:
+# - Noise-cancelling headphones (creating destructive interference)
+# - Surround sound systems (using phase differences for directional effects)
+# - Room acoustics (managing reflections that can interfere)
+</pre>
                                     <p>This creates three files. The constructive one will sound noticeably louder (twice as loud). The destructive one will be nearly silent. The partial one will be somewhere in between. Listen to all three. This teaches your ears what phase differences sound like.</p>
                                 </div>
 
