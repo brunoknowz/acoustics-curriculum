@@ -688,6 +688,35 @@
                                     <p>So when people say "sine of 45° equals 0.707", they mean "when you rotate 45° from the start, the y-coordinate (how far up) is 0.707." That's all it is. A coordinate.</p>
                                 </div>
 
+                                <div class="lesson-block concept">
+                                    <h3>🎨 Visual: Picture the Unit Circle</h3>
+                                    <p>Before we look at numbers, visualise this:</p>
+                                    <pre style="color: #6b9a85; background: #16161c; border: 1px solid #2a2a32; padding: 1.5rem; border-radius: 8px; text-align: center; margin: 1.5rem 0;">
+                         (90° / π/2)
+                         sin(θ) = 1
+                              ↑
+                              │
+                     ◆─────────◇─────────◆
+                     │        ╱│╲        │
+                     │       ╱ │ ╲       │
+        (180°/π)────◆───────●  │  ●─────◆──── (0°/0)  [3 o'clock]
+        sin = 0     │        ╲ │ ╱       │    sin = 0
+        cos = -1    │        ╲│╱        │    cos = 1
+                     │         ●         │    [Your starting point]
+                     ◆─────────◇─────────◆
+                              ↓
+                         (270° / 3π/2)
+                         sin(θ) = -1
+
+Your position on the circle:  (x, y) = (cos(θ), sin(θ))
+At 0°: (1, 0) — far right
+At 90°: (0, 1) — far up
+At 180°: (-1, 0) — far left
+At 270°: (0, -1) — far down
+Every point on the circle: cos²(θ) + sin²(θ) = 1 (always!)
+                                    </pre>
+                                </div>
+
                                 <div class="lesson-block stepbystep">
                                     <h3>🎯 Key Angles: What Sine and Cosine Look Like</h3>
                                     <p>Let's trace what happens as your friend walks around the circle starting from 3 o'clock (0°):</p>
@@ -772,7 +801,9 @@
 
                                 <div class="lesson-block stepbystep">
                                     <h3>🔧 Now Code It: Draw the Unit Circle</h3>
-                                    <p>Now that you understand conceptually, let's make a computer draw it. This code creates a visual representation of exactly what we've been discussing.</p>
+                                    <p>Now that you understand conceptually, let's make a computer draw it for us. This is where Python comes in.</p>
+                                    <p><strong>A note on the code below:</strong> If you haven't seen Python before, don't worry! The code below is just instructions we're giving to the computer: "Create 100 angles... calculate their coordinates... draw them as a circle... add labels." Each line is a small instruction. In Module 0.2, you'll learn how to install Python and run code like this. For now, just understand what this code is doing (the comments explain each line).</p>
+                                    <p>This code creates a visual representation of exactly what we've been discussing:</p>
                                     <pre>import matplotlib.pyplot as plt
 import numpy as np
 
@@ -826,9 +857,40 @@ plt.show()</pre>
                                     <p>Once you understand this—that sine is the y-coordinate and the y-axis ranges from -1 to 1 on the unit circle—all the sine values make sense. They're not arbitrary. They're geometric.</p>
                                 </div>
 
+                                <div class="lesson-block concept">
+                                    <h3>🎨 Visual: What the Sine and Cosine Waves Look Like</h3>
+                                    <p>As you walk around the circle, your y-coordinate (sine) and x-coordinate (cosine) trace out waves:</p>
+                                    <pre style="color: #6b9a85; background: #16161c; border: 1px solid #2a2a32; padding: 1.5rem; border-radius: 8px; text-align: center; margin: 1.5rem 0;">
+Sine (blue) — your y-position as you go around the circle:
+     1 ╱╲
+       ╱  ╲        ╱╲
+      ╱    ╲      ╱  ╲        ← Starts at 0, peaks at 90°, back to 0 at 180°
+  ────●──────●────●────●──── 0
+      ╲    ╱      ╲  ╱
+       ╲  ╱        ╲╱
+    -1 ╱╲╱ ← 270°: sin = -1 (all the way down)
+    0°  90° 180° 270° 360°
+
+Cosine (red) — your x-position as you go around the circle:
+     1 ────●────────────●──── ← Starts at 1 (far right)
+         ╱  ╲          ╱  ╲
+        ╱    ╲        ╱    ╲
+   ────●──────●──────●──────●────
+        ╲    ╱        ╲    ╱
+         ╲  ╱ ← 180°: cos = -1 ╲  ╱
+       -1 ╱╲╱  (far left)      ╲╱
+    0°  90° 180° 270° 360°
+
+NOTICE: They're the same wave shape, but cosine is shifted left by 90°.
+This 90° (or π/2 radian) shift is called "phase difference".
+In acoustics, phase differences are HUGE because they determine whether waves
+reinforce each other (constructive) or cancel out (destructive).
+                                    </pre>
+                                </div>
+
                                 <div class="lesson-block stepbystep">
                                     <h3>🔧 Visualise Sin and Cos Changing</h3>
-                                    <p>Let's show how sine and cosine change as you rotate around the circle:</p>
+                                    <p>Let's show how sine and cosine change as you rotate around the circle with code:</p>
                                     <pre>import matplotlib.pyplot as plt
 import numpy as np
 
@@ -951,9 +1013,80 @@ plt.show()</pre>
                                     <p>When f₁ ≈ f₂, the sum creates an amplitude envelope—a slowly varying amplitude modulation on top of a carrier frequency. That modulation is the beat you hear.</p>
                                 </div>
 
+                                <div class="lesson-block concept">
+                                    <h3>🎨 Visual: Constructive, Destructive, and Beat Interference</h3>
+                                    <p>Here's what these three interference patterns look like as waves:</p>
+                                    <pre style="color: #6b9a85; background: #16161c; border: 1px solid #2a2a32; padding: 1.5rem; border-radius: 8px; text-align: center; margin: 1.5rem 0;">
+CONSTRUCTIVE INTERFERENCE (Phase difference = 0°)
+Crests meet crests, troughs meet troughs → AMPLIFIED
+
+Wave 1:  ╱╲    ╱╲    ╱╲
+        ╱  ╲  ╱  ╲  ╱  ╲
+───────●────●──●────●────●──
+        ╲  ╱  ╲  ╱  ╲  ╱
+        ╲╱    ╲╱    ╲╱
+
+Wave 2:  ╱╲    ╱╲    ╱╲
+        ╱  ╲  ╱  ╲  ╱  ╲
+───────●────●──●────●────●──
+        ╲  ╱  ╲  ╱  ╲  ╱
+        ╲╱    ╲╱    ╲╱
+
+Sum:     ╱╲╲  ╱╲╲  ╱╲╲
+        ╱  ╲╱╲╱  ╲╱╲╱  ╲  → TWICE as tall!
+───────●──────●──────●────
+        ╲  ╱╲╱  ╲╱╲  ╲╱
+        ╲╱╱ ╱  ╲╱ ╱ ╱
+
+
+DESTRUCTIVE INTERFERENCE (Phase difference = 180°)
+Crests meet troughs → CANCELLATION
+
+Wave 1:  ╱╲    ╱╲
+        ╱  ╲  ╱  ╲
+───────●────●──●────●────
+        ╲  ╱  ╲  ╱
+        ╲╱    ╲╱
+
+Wave 2:  ╲╱    ╲╱
+        ╱  ╲  ╱  ╲  (inverted)
+───────●────●──●────●────
+        ╲  ╱  ╲  ╱
+        ╱╲    ╱╲
+
+Sum:    ───────●────●──●────●── → FLAT LINE (silence!)
+
+
+BEATS (Phase difference changes slowly over time)
+Wave 1 (440 Hz):     ~~~~~~~~~
+Wave 2 (442 Hz):    ~~~~~~~~~~ (slightly faster)
+
+At time t=0: in phase → loud
+At time t=0.25s: out of phase → quiet
+At time t=0.5s: in phase again → loud
+
+Result:  ╱╲      ╱╲      ╱╲
+        ╱  ╲    ╱  ╲    ╱  ╲
+───────●────●──●──────●──────●──
+       ╲  ╱    ╲  ╱    ╲  ╱
+        ╲╱      ╲╱      ╲╱
+
+You hear: "woom... woom... woom..." (wobbling effect) at 2 Hz beat frequency
+The audio frequency is 441 Hz, but loudness wobbles 2 times per second.
+                                    </pre>
+                                </div>
+
                                 <div class="lesson-block stepbystep">
                                     <h3>🔧 Create Beats in Python</h3>
-                                    <p>Let's generate the beat phenomenon and listen to it:</p>
+                                    <p>Now let's generate these interference patterns with Python code and listen to them. The code below does this:</p>
+                                    <ol style="margin-left: 2rem; margin-bottom: 1.5rem;">
+                                        <li><strong>Set up the timing:</strong> We'll create 5 seconds of audio at 44.1 kHz (44,100 samples per second)</li>
+                                        <li><strong>Create two waves:</strong> 440 Hz and 442 Hz (slightly different frequencies)</li>
+                                        <li><strong>Add them together:</strong> This is superposition—the two waves interfere</li>
+                                        <li><strong>Save the result:</strong> Write it as a .wav file you can listen to</li>
+                                        <li><strong>Plot it:</strong> Show what the interference looks like visually</li>
+                                    </ol>
+                                    <p>Don't worry about every line of code right now. Focus on the overall logic: create waves → add them → save the result. If this is your first time seeing Python, Module 0.2 will teach you step-by-step.</p>
                                     <pre>import numpy as np
 from scipy.io import wavfile
 import matplotlib.pyplot as plt
@@ -994,19 +1127,19 @@ plt.show()</pre>
 
                                 <div class="lesson-block stepbystep">
                                     <h3>🔧 Constructive vs. Destructive: Generate Examples</h3>
-                                    <p>Now let's create three .wav files showing constructive, destructive, and partial interference:</p>
+                                    <p>Now let's create three .wav files that clearly show the difference between constructive, destructive, and partial interference. You'll actually hear how different they are:</p>
                                     <pre>import numpy as np
 from scipy.io import wavfile
 
 sr = 44100
 duration = 2
 t = np.linspace(0, duration, int(sr * duration))
-f = 440             # Frequency
+f = 440             # Both waves at same frequency (440 Hz)
 
 # Amplitude for each wave
 A = 0.3
 
-# Base wave
+# Base wave (the first speaker)
 wave1 = A * np.sin(2 * np.pi * f * t)
 
 # Case 1: Constructive (phase difference = 0)
