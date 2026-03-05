@@ -12,116 +12,158 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0f0f13 0%, #1a1a24 100%);
-            color: #e0e0e0;
-            line-height: 1.7;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #0d0d11;
+            color: #e8e8ec;
+            line-height: 1.8;
             min-height: 100vh;
         }
 
         nav {
             position: sticky;
             top: 0;
-            background: rgba(15, 15, 19, 0.95);
-            border-bottom: 2px solid #2e2e42;
-            padding: 1rem 2rem;
+            background: rgba(13, 13, 17, 0.98);
+            border-bottom: 1px solid #2a2a32;
+            padding: 1.25rem 2rem;
             z-index: 100;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 1.5rem;
+            backdrop-filter: blur(10px);
         }
 
         nav h1 {
-            font-size: 1.4rem;
-            background: linear-gradient(135deg, #7c6af7, #3ecfcf);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 1.3rem;
+            color: #5b8fa3;
+            font-weight: 600;
+            letter-spacing: 0.5px;
         }
 
         nav .nav-links {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             list-style: none;
             flex-wrap: wrap;
         }
 
         nav a {
-            color: #3ecfcf;
+            color: #a8a8b0;
             text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            font-weight: 500;
         }
 
         nav a:hover {
-            color: #7c6af7;
+            color: #5b8fa3;
         }
 
         main {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 2.5rem 2rem;
         }
 
         .header-section {
-            background: #1a1a24;
-            border: 2px solid #2e2e42;
+            background: #16161c;
+            border: 1px solid #2a2a32;
             border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2rem;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .header-section:hover {
+            box-shadow: 0 4px 12px rgba(91, 143, 163, 0.1);
         }
 
         .header-section h2 {
-            color: #3ecfcf;
+            color: #5b8fa3;
+            margin-bottom: 1.5rem;
+            font-size: 1.9rem;
+            letter-spacing: 0.3px;
+        }
+
+        .header-section h3 {
+            color: #6b9a85;
+            margin-top: 2rem;
             margin-bottom: 1rem;
-            font-size: 1.8rem;
+            font-size: 1.3rem;
         }
 
         .header-section p {
-            margin-bottom: 0.8rem;
-            color: #c0c0c0;
+            margin-bottom: 1rem;
+            color: #c8c8cc;
+            line-height: 1.9;
+        }
+
+        .header-section ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+            color: #c8c8cc;
+        }
+
+        .header-section li {
+            margin-bottom: 0.7rem;
+            line-height: 1.8;
         }
 
         .toolkit {
-            background: #242432;
-            border-left: 4px solid #5fcf7a;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-top: 1.5rem;
+            background: #1a1a21;
+            border-left: 4px solid #6b9a85;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
         }
 
         .toolkit h3 {
-            color: #5fcf7a;
-            margin-bottom: 1rem;
+            color: #6b9a85;
+            margin-bottom: 1.5rem;
+            font-size: 1.15rem;
         }
 
         .toolkit-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
 
         .toolkit-item {
-            background: #1a1a24;
-            padding: 1rem;
-            border-radius: 6px;
-            border: 1px solid #2e2e42;
+            background: #16161c;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #2a2a32;
+            transition: all 0.3s ease;
+        }
+
+        .toolkit-item:hover {
+            border-color: #6b9a85;
+            box-shadow: 0 2px 8px rgba(107, 154, 133, 0.1);
         }
 
         .toolkit-item h4 {
-            color: #3ecfcf;
-            margin-bottom: 0.5rem;
+            color: #5b8fa3;
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+        }
+
+        .toolkit-item p {
+            color: #a8a8b0;
+            font-size: 0.95rem;
+            line-height: 1.7;
         }
 
         .toolkit-item code {
-            background: #0f0f13;
-            padding: 0.2rem 0.4rem;
-            border-radius: 3px;
-            color: #f7a14a;
+            background: #0d0d11;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            color: #9d8062;
             font-size: 0.85rem;
+            font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
         }
 
         .phase {
@@ -129,58 +171,63 @@
         }
 
         details.phase-details {
-            background: #1a1a24;
-            border: 2px solid #2e2e42;
+            background: #16161c;
+            border: 1px solid #2a2a32;
             border-radius: 12px;
             overflow: hidden;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
         }
 
         details.phase-details[open] {
-            box-shadow: 0 8px 32px rgba(124, 106, 247, 0.15);
-            border-color: #7c6af7;
+            box-shadow: 0 4px 16px rgba(91, 143, 163, 0.15);
+            border-color: #5b8fa3;
         }
 
         details.phase-details > summary {
-            background: linear-gradient(135deg, #1a1a24 0%, #242432 100%);
-            padding: 1.5rem;
+            background: #16161c;
+            padding: 1.75rem;
             cursor: pointer;
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             font-weight: 600;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: background 0.3s, color 0.3s;
-            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
             user-select: none;
+            color: #e8e8ec;
         }
 
         details.phase-details > summary:hover {
-            background: linear-gradient(135deg, #242432 0%, #2e2e42 100%);
-            border-bottom-color: #7c6af7;
+            background: #1a1a21;
+            border-bottom-color: #5b8fa3;
         }
 
         details.phase-details[open] > summary {
-            border-bottom-color: #7c6af7;
+            border-bottom-color: #5b8fa3;
+            background: #1a1a21;
         }
 
         .phase-title {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 1.5rem;
         }
 
         .phase-number {
-            background: linear-gradient(135deg, #7c6af7, #3ecfcf);
+            background: #5b8fa3;
             color: #fff;
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
+            font-size: 1.2rem;
             flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(91, 143, 163, 0.2);
         }
 
         .phase-title-text {
@@ -189,18 +236,20 @@
 
         .phase-title-text h2 {
             margin: 0;
-            color: #e0e0e0;
+            color: #e8e8ec;
+            font-size: 1.2rem;
         }
 
         .phase-title-text p {
-            margin: 0.2rem 0 0 0;
+            margin: 0.4rem 0 0 0;
             font-size: 0.9rem;
-            color: #a0a0a0;
+            color: #a8a8b0;
         }
 
         .chevron {
-            color: #7c6af7;
-            transition: transform 0.3s;
+            color: #5b8fa3;
+            transition: transform 0.3s ease;
+            font-size: 1.1rem;
         }
 
         details.phase-details[open] .chevron {
@@ -208,189 +257,255 @@
         }
 
         .phase-content {
-            padding: 2rem;
+            padding: 2.5rem;
+            background: #16161c;
         }
 
         details.module-details {
-            background: #242432;
-            border: 1px solid #2e2e42;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
+            background: #1a1a21;
+            border: 1px solid #2a2a32;
+            border-radius: 10px;
+            margin-bottom: 2rem;
             overflow: hidden;
+            transition: all 0.3s ease;
         }
 
         details.module-details[open] {
-            box-shadow: 0 4px 16px rgba(62, 207, 207, 0.1);
-            border-color: #3ecfcf;
+            box-shadow: 0 4px 12px rgba(107, 154, 133, 0.1);
+            border-color: #6b9a85;
         }
 
         details.module-details > summary {
-            background: #1a1a24;
-            padding: 1rem 1.5rem;
+            background: #16161c;
+            padding: 1.35rem 1.75rem;
             cursor: pointer;
             font-weight: 600;
             font-size: 1.05rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: background 0.3s, color 0.3s;
+            transition: all 0.3s ease;
             user-select: none;
-            color: #c0c0c0;
+            color: #c8c8cc;
         }
 
         details.module-details > summary:hover {
-            background: #242432;
-            color: #3ecfcf;
+            background: #1a1a21;
+            color: #6b9a85;
         }
 
         details.module-details[open] > summary {
-            color: #3ecfcf;
+            color: #6b9a85;
+            background: #1a1a21;
         }
 
         .module-content {
-            padding: 1.5rem;
-            background: #242432;
+            padding: 2rem;
+            background: #1a1a21;
         }
 
         .lesson-block {
-            background: #1a1a24;
-            border-left: 4px solid #3ecfcf;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
+            background: #16161c;
+            border-left: 4px solid #9d8062;
+            padding: 1.75rem;
+            margin-bottom: 2rem;
             border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .lesson-block:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            border-left-color: #5b8fa3;
         }
 
         .lesson-block h3 {
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .lesson-block.concept {
+            border-left-color: #5b8fa3;
         }
 
         .lesson-block.concept h3 {
-            color: #3ecfcf;
+            color: #5b8fa3;
         }
 
         .lesson-block.stepbystep {
-            border-left-color: #5fcf7a;
+            border-left-color: #6b9a85;
         }
 
         .lesson-block.stepbystep h3 {
-            color: #5fcf7a;
+            color: #6b9a85;
         }
 
         .lesson-block.practice {
-            border-left-color: #f7a14a;
+            border-left-color: #9d8062;
         }
 
         .lesson-block.practice h3 {
-            color: #f7a14a;
+            color: #9d8062;
         }
 
         .lesson-block p {
-            margin-bottom: 1rem;
-            color: #d0d0d0;
+            margin-bottom: 1.1rem;
+            color: #d8d8dc;
+            line-height: 1.85;
         }
 
         .lesson-block ul, .lesson-block ol {
-            margin: 1rem 0 1rem 2rem;
-            color: #d0d0d0;
+            margin: 1.2rem 0 1.2rem 2.2rem;
+            color: #d8d8dc;
         }
 
         .lesson-block li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.7rem;
+            line-height: 1.8;
         }
 
         .lesson-block code {
-            background: #0f0f13;
-            color: #f7a14a;
-            padding: 0.3rem 0.6rem;
+            background: #0d0d11;
+            color: #9d8062;
+            padding: 0.4rem 0.7rem;
             border-radius: 4px;
-            font-family: 'Courier New', monospace;
+            font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
             font-size: 0.9rem;
         }
 
         .lesson-block pre {
-            background: #0f0f13;
-            border: 1px solid #2e2e42;
-            border-radius: 6px;
-            padding: 1rem;
+            background: #0d0d11;
+            border: 1px solid #2a2a32;
+            border-radius: 8px;
+            padding: 1.5rem;
             overflow-x: auto;
-            margin: 1rem 0;
-            color: #5fcf7a;
-            font-family: 'Courier New', monospace;
-            font-size: 0.85rem;
+            margin: 1.5rem 0;
+            color: #9d8062;
+            font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .lesson-block pre code {
+            background: none;
+            padding: 0;
+            color: #9d8062;
         }
 
         .lesson-block strong {
-            color: #e0e0e0;
+            color: #e8e8ec;
+            font-weight: 600;
         }
 
         details.deepdive-expand {
-            margin-top: 1rem;
+            margin-top: 1.5rem;
         }
 
         details.deepdive-expand summary {
-            background: #2e2e42;
-            padding: 0.8rem 1rem;
+            background: #1a1a21;
+            padding: 1rem 1.3rem;
             cursor: pointer;
-            border-radius: 6px;
+            border-radius: 8px;
             user-select: none;
-            color: #a0a0a0;
+            color: #a8a8b0;
             font-weight: 500;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: background 0.3s, color 0.3s;
-        }
-
-        details.deepdive-expand summary:hover {
-            background: #3e3e5a;
-            color: #c0c0c0;
-        }
-
-        details.deepdive-expand[open] summary {
-            background: #3e3e5a;
-            color: #c0c0c0;
-        }
-
-        details.deepdive-expand .deepdive-content {
-            background: #2e2e42;
-            padding: 1rem;
-            border-radius: 6px;
-            margin-top: 0.5rem;
-            border-left: 3px solid #a0a0a0;
+            transition: all 0.3s ease;
             font-size: 0.95rem;
         }
 
+        details.deepdive-expand summary:hover {
+            background: #242430;
+            color: #c8c8cc;
+            border-left: 3px solid #5b8fa3;
+            padding-left: 1rem;
+        }
+
+        details.deepdive-expand[open] summary {
+            background: #242430;
+            color: #c8c8cc;
+        }
+
+        details.deepdive-expand .deepdive-content {
+            background: #1a1a21;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 0.8rem;
+            border-left: 3px solid #5b8fa3;
+            font-size: 0.97rem;
+            color: #d8d8dc;
+            line-height: 1.8;
+        }
+
         .equation {
-            background: #2e2e42;
-            border-left: 3px solid #7c6af7;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 4px;
-            font-family: 'Courier New', monospace;
-            color: #f7a14a;
+            background: #1a1a21;
+            border-left: 3px solid #5b8fa3;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 6px;
+            font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+            color: #9d8062;
+            overflow-x: auto;
         }
 
         .coming-soon {
-            background: linear-gradient(135deg, #2e2e42 0%, #3e3e5a 100%);
-            border: 2px dashed #7c6af7;
-            border-radius: 8px;
-            padding: 2rem;
+            background: #1a1a21;
+            border: 2px dashed #5b8fa3;
+            border-radius: 10px;
+            padding: 2.5rem;
             text-align: center;
-            color: #a0a0a0;
-            margin: 1.5rem 0;
+            color: #a8a8b0;
+            margin: 2rem 0;
         }
 
         .coming-soon h3 {
-            color: #7c6af7;
-            margin-bottom: 0.5rem;
+            color: #5b8fa3;
+            margin-bottom: 0.8rem;
+            font-size: 1.15rem;
+        }
+
+        table {
+            width: 100%;
+            margin: 1.5rem 0;
+            border-collapse: collapse;
+            color: #d8d8dc;
+            background: #16161c;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        table thead {
+            background: #1a1a21;
+        }
+
+        table th {
+            padding: 1rem;
+            text-align: left;
+            color: #5b8fa3;
+            font-weight: 600;
+            border-bottom: 1px solid #2a2a32;
+        }
+
+        table td {
+            padding: 1rem;
+            border-bottom: 1px solid #2a2a32;
+        }
+
+        table tbody tr:nth-child(odd) {
+            background: #16161c;
+        }
+
+        table tbody tr:nth-child(even) {
+            background: #1a1a21;
         }
 
         @media (max-width: 768px) {
             main {
-                padding: 1rem;
+                padding: 1.5rem 1rem;
             }
 
             nav {
@@ -402,20 +517,20 @@
             }
 
             details.phase-details > summary {
-                padding: 1rem;
+                padding: 1.25rem;
                 font-size: 1rem;
             }
 
             .phase-content {
-                padding: 1rem;
+                padding: 1.5rem;
             }
 
             .module-content {
-                padding: 1rem;
+                padding: 1.5rem;
             }
 
             .lesson-block {
-                padding: 1rem;
+                padding: 1.25rem;
             }
 
             .toolkit-grid {
@@ -431,19 +546,17 @@
             transition: all 0.3s ease;
         }
 
-        table {
-            width: 100%;
-            margin: 1rem 0;
-            border-collapse: collapse;
-            color: #d0d0d0;
+        .learning-objective {
+            background: rgba(91, 143, 163, 0.1);
+            border-left: 4px solid #5b8fa3;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 6px;
+            color: #d8d8dc;
         }
 
-        table tr {
-            border-bottom: 1px solid #2e2e42;
-        }
-
-        table td {
-            padding: 0.5rem;
+        .learning-objective strong {
+            color: #5b8fa3;
         }
     </style>
 </head>
@@ -462,8 +575,8 @@
             <h2>Welcome to Your Acoustics Journey</h2>
             <p>This is a <strong>complete, self-contained curriculum</strong> that takes you from GCSE-level maths to Masters-level acoustics understanding. Whether you're a maker, tinkerer, Arduino enthusiast, or just someone fascinated by sound, this course is designed for <strong>self-taught technical people</strong> who want to understand the physics, maths, and engineering behind acoustics.</p>
 
-            <h3 style="color: #7c6af7; margin-top: 1.5rem;">How to Use This Course</h3>
-            <ul style="color: #d0d0d0; margin-top: 1rem;">
+            <h3>How to Use This Course</h3>
+            <ul>
                 <li><strong>Click to expand.</strong> Every phase is a clickable card. Click any card to see the modules inside.</li>
                 <li><strong>Go module by module.</strong> Each module expands to reveal full lesson content with explanations, worked examples, and exercises.</li>
                 <li><strong>Learn by doing.</strong> Every lesson includes practical exercises and exact instructions. You'll measure real sound, write Python code, and build circuits.</li>
@@ -471,9 +584,9 @@
                 <li><strong>Pace yourself: ~4-6 hours/week.</strong> The full Masters-level journey is ~18-24 months. Phase 0-1 can be done in 3-4 weeks of focused learning.</li>
             </ul>
 
-            <h3 style="color: #7c6af7; margin-top: 1.5rem;">What You'll Learn</h3>
+            <h3>What You'll Learn</h3>
             <p>By the end of Phase 1, you'll understand the physics of sound and how to measure it. By the end of Phase 10, you'll be able to:</p>
-            <ul style="color: #d0d0d0; margin-top: 1rem;">
+            <ul>
                 <li>Design and build acoustic systems from first principles</li>
                 <li>Use sophisticated tools like REW, Python DSP libraries, and FEA software</li>
                 <li>Understand the mathematics behind frequency analysis, filtering, and signal processing</li>
@@ -483,7 +596,7 @@
                 <li>Understand how the human ear works and why we perceive sound the way we do</li>
             </ul>
 
-            <h3 style="color: #7c6af7; margin-top: 1.5rem;">Why This Matters</h3>
+            <h3>Why This Matters</h3>
             <p>Acoustics is <strong>everywhere</strong>. It's in concert halls and studios, in noise-cancelling headphones, in medical ultrasound, in vibration control for precision instruments, and in environmental noise regulation. Understanding acoustics means understanding a fundamental force shaping the world around us.</p>
 
             <div class="toolkit" id="toolkit">
@@ -534,193 +647,573 @@
                         <span class="chevron">▼</span>
                     </summary>
                     <div class="phase-content">
+
+                        <!-- MODULE 0.1: TRIGONOMETRY AND THE UNIT CIRCLE -->
                         <details class="module-details">
                             <summary>0.1 Trigonometry and the Unit Circle</summary>
                             <div class="module-content">
+
                                 <div class="lesson-block concept">
-                                    <h3>📖 Why Trigonometry Matters</h3>
-                                    <p><strong>Opening analogy:</strong> Imagine a Ferris wheel. Standing to the side, you see cabins moving up and down. Sound waves work the same way—they oscillate back and forth. Trigonometry is the language for describing those oscillations.</p>
-                                    <p>Every sound is fundamentally a <strong>sine wave</strong>. Well, complex sounds are combinations, but first you need to understand a pure sine wave.</p>
-                                    <p><strong>What you'll learn:</strong></p>
-                                    <ul>
-                                        <li>What sine and cosine actually are (coordinates on a circle, not ratios)</li>
-                                        <li>Why we use <strong>radians</strong> instead of degrees in acoustics</li>
-                                        <li>What <strong>phase</strong> means in sound</li>
-                                        <li>The unit circle as your mental model</li>
-                                    </ul>
+                                    <h3>🎯 Opening Hook: Why Circles Unlock Waves</h3>
+                                    <p>You already understand circles. A steering wheel spinning. A clock face ticking. The horizon curving. The rings in water when you throw a pebble. In this module, we're going to use a very simple circle—one with radius 1—as a tool to understand waves. Not because it's magic, but because it naturally explains how things that go round and round (like rotating wheels or oscillating motion) can also describe things that go up and down.</p>
+                                    <p>Here's the key insight: <strong>sound is rotation viewed from the side</strong>. Imagine a wheel spinning. If you stand to the side and watch a single point on the wheel, you see it moving up and down. That up-and-down motion is a sine wave. Sound waves work exactly the same way. This module builds that intuition.</p>
                                 </div>
 
                                 <div class="lesson-block stepbystep">
-                                    <h3>🔧 The Unit Circle</h3>
-                                    <p>A circle with radius 1. Any point on it has coordinates (x, y) where:</p>
-                                    <div class="equation">
-                                        x = cos(angle)<br>
-                                        y = sin(angle)<br>
-                                        tan(angle) = y/x
-                                    </div>
-                                    <p><strong>Key angles:</strong></p>
+                                    <h3>🔍 Part 1: What is a Circle?</h3>
+                                    <p>A circle is every point equidistant from a centre point. That distance is the <strong>radius</strong>. If you walk around a circle of radius 1, you're always exactly 1 unit away from the middle.</p>
+                                    <p>Picture this: You're standing in the middle of a perfect circle. A friend walks around it. At any moment, no matter where they are—north, east, southwest, whatever—they're always the same distance away. That's what a circle is. The distance they stay from you is the radius.</p>
+                                    <p>Now here's why circles matter: <strong>circles describe rotation</strong>. And rotation describes oscillation. Waves oscillate. This is why circles unlock wave behaviour. When something rotates, different observers see different things. Someone rotating sees circular motion. Someone standing to the side sees up-and-down motion. Both are true. They're just different perspectives on the same thing.</p>
+                                </div>
+
+                                <div class="lesson-block concept">
+                                    <h3>🎯 Part 2: The Unit Circle (Why We Use It)</h3>
+                                    <p>We use a circle with radius 1—the unit circle—not because radius 1 is special, but because the maths works out elegantly. When the radius is 1, a lot of things simplify. Radius 1 means every point on the circle is exactly 1 unit from the centre.</p>
+                                    <p>Imagine standing at the centre of this circle, looking right (towards 3 o'clock on a clock face, or the direction "east"). A friend starts there and walks around the circle. As they walk, their position changes. We can describe that position in two ways:</p>
+                                    <p><strong>By coordinates:</strong> "You're 0.707 units right and 0.707 units up" (these are x and y).</p>
+                                    <p><strong>By angle:</strong> "You've rotated 45° (or π/4 radians) from the starting point."</p>
+                                    <p>Both describe the same position. Here's the magic: on the unit circle, those coordinate numbers ARE sine and cosine. The x-coordinate is cosine. The y-coordinate is sine. This isn't a separate thing—the coordinates of the circle ARE the sine and cosine values.</p>
+                                </div>
+
+                                <div class="lesson-block stepbystep">
+                                    <h3>🔧 Part 3: Sine and Cosine Are Coordinates (Not Ratios)</h3>
+                                    <p>This is the most important insight. <strong>Sine and cosine aren't mysterious ratios. They're just coordinates on the unit circle.</strong></p>
+                                    <p>Here's how to think about it: Draw a unit circle. Pick any point on it. From the centre, draw a line to that point. Now draw a vertical line straight down from your point to the horizontal axis. That forms a right triangle. The triangle's corners are: the centre, your point, and where the vertical line meets the horizontal.</p>
+                                    <p>In this triangle:</p>
+                                    <ul>
+                                        <li><strong>Cosine is the horizontal leg</strong> (how far left-right from the centre). It's the x-coordinate. On the unit circle, this is always between -1 and 1.</li>
+                                        <li><strong>Sine is the vertical leg</strong> (how far up-down from the centre). It's the y-coordinate. Also between -1 and 1.</li>
+                                        <li><strong>The hypotenuse is always 1</strong> (the radius of the unit circle).</li>
+                                    </ul>
+                                    <p>So when people say "sine of 45° equals 0.707", they mean "when you rotate 45° from the start, the y-coordinate (how far up) is 0.707." That's all it is. A coordinate.</p>
+                                </div>
+
+                                <div class="lesson-block stepbystep">
+                                    <h3>🎯 Key Angles: What Sine and Cosine Look Like</h3>
+                                    <p>Let's trace what happens as your friend walks around the circle starting from 3 o'clock (0°):</p>
                                     <table>
-                                        <tr><td>Angle</td><td>Radians</td><td>sin</td><td>cos</td></tr>
-                                        <tr><td>0°</td><td>0</td><td>0</td><td>1</td></tr>
-                                        <tr><td>90°</td><td>π/2</td><td>1</td><td>0</td></tr>
-                                        <tr><td>180°</td><td>π</td><td>0</td><td>-1</td></tr>
-                                        <tr><td>270°</td><td>3π/2</td><td>-1</td><td>0</td></tr>
+                                        <thead>
+                                            <tr>
+                                                <th>Angle (degrees)</th>
+                                                <th>Angle (radians)</th>
+                                                <th>x-coordinate (cos)</th>
+                                                <th>y-coordinate (sin)</th>
+                                                <th>Where on circle?</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>0°</td>
+                                                <td>0</td>
+                                                <td>1</td>
+                                                <td>0</td>
+                                                <td>Right (3 o'clock)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>90°</td>
+                                                <td>π/2</td>
+                                                <td>0</td>
+                                                <td>1</td>
+                                                <td>Top (12 o'clock)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>180°</td>
+                                                <td>π</td>
+                                                <td>-1</td>
+                                                <td>0</td>
+                                                <td>Left (9 o'clock)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>270°</td>
+                                                <td>3π/2</td>
+                                                <td>0</td>
+                                                <td>-1</td>
+                                                <td>Bottom (6 o'clock)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>45°</td>
+                                                <td>π/4</td>
+                                                <td>0.707</td>
+                                                <td>0.707</td>
+                                                <td>Northeast</td>
+                                            </tr>
+                                        </tbody>
                                     </table>
+                                    <p>Notice the pattern: at the 4 cardinal points, sine and cosine are either 0, 1, or -1. At 45°, they're both the same. This pattern repeats and is the foundation of trigonometry.</p>
                                 </div>
 
                                 <div class="lesson-block concept">
-                                    <h3>📖 Radians vs Degrees</h3>
-                                    <p>Degrees (360° in a circle) are convenient for everyday angles. But calculus and physics love radians because the mathematics is cleaner. The derivative of sin(x) is cos(x) <em>only if x is in radians</em>.</p>
+                                    <h3>🎯 Part 4: Why Radians? (Not Just "Degrees Are Bad")</h3>
+                                    <p>Degrees are arbitrary—humans decided 360 because of ancient Babylonian calendar maths, not because of anything natural. Radians are different. One radian is defined as the angle where the arc length equals the radius.</p>
+                                    <p>On the unit circle (radius = 1), the arc length in units equals the angle in radians. Walk 1 unit around the circle? You've rotated 1 radian. Walk π units around the circle? You've rotated π radians. This is natural and elegant.</p>
+                                    <p>Why does this matter? Because the derivative of sin(x) in degrees is ugly and involves extra constants. The derivative of sin(x) in radians is cos(x)—clean and simple. Physics and acoustics use radians because the mathematics is cleaner. All calculus prefers radians.</p>
+                                    <p><strong>Quick conversion:</strong> 360° = 2π radians. To convert from degrees: radians = degrees × (π/180). To convert to degrees: degrees = radians × (180/π).</p>
                                     <div class="equation">
-                                        1 radian ≈ 57.3°<br>
-                                        Full circle = 2π radians = 360°
+                                        360° = 2π radians ≈ 6.28 radians<br>
+                                        180° = π radians ≈ 3.14 radians<br>
+                                        90° = π/2 radians ≈ 1.57 radians
                                     </div>
                                 </div>
 
                                 <div class="lesson-block concept">
-                                    <h3>📖 Phase: The Position of a Wave</h3>
-                                    <p><strong>Phase</strong> tells you where in its cycle a wave is at any moment. If two loudspeakers play the same tone but the sound from one arrives slightly later (due to distance), the waves have a phase difference. Your brain uses this to figure out which speaker is closer.</p>
-                                    <div class="equation">
-                                        y(t) = sin(2πft + φ)
-                                    </div>
-                                    <p>Here φ (phi) is the phase offset.</p>
+                                    <h3>🎯 Part 5: Phase (What it Really Means)</h3>
+                                    <p>Phase is just "where on the circle are you starting?" If a wave starts at the top of the circle (90° or π/2 radians), it has a different phase than one starting at the right (0°). Same frequency, different starting point.</p>
+                                    <p><strong>Clock dancer analogy:</strong> Two dancers dancing to the same music, but one started their routine 2 beats later. They're doing the same moves, just at different moments. The one who started late is "out of phase." Their motion is shifted in time, which looks like it's shifted on the circle.</p>
+                                    <p>In the equation y(t) = sin(2πft + φ), the φ (phi) is the phase offset—where you start on the circle. If φ = 0, you start at 0° (right side). If φ = π/2, you start at 90° (top). If φ = π, you start at 180° (left side)—inverted from the first case. This is why phase matters so much in acoustics: two speakers playing the same frequency might have different phases, and that determines whether they constructively reinforce each other or destructively cancel.</p>
                                 </div>
 
                                 <div class="lesson-block practice">
-                                    <h3>📝 Homework</h3>
-                                    <p><strong>Task 1:</strong> Plot y = sin(x) for x from 0 to 2π using Python.</p>
-                                    <p><strong>Task 2:</strong> Create a Python script to calculate sin and cos of 45°:</p>
-                                    <pre>import math
-angle_degrees = 45
-angle_radians = angle_degrees * math.pi / 180
-print(f"sin({angle_degrees}°) = {math.sin(angle_radians)}")
-print(f"cos({angle_degrees}°) = {math.cos(angle_radians)}")</pre>
-                                </div>
-                            </div>
-                        </details>
-
-                        <details class="module-details">
-                            <summary>0.2 Superposition — Adding Waves (CRITICAL CONCEPT)</summary>
-                            <div class="module-content">
-                                <div class="lesson-block concept">
-                                    <h3>📖 The Principle of Superposition</h3>
-                                    <p><strong>Opening analogy:</strong> Drop pebbles into water. Ripples overlap. Where they meet, the height is the sum of the individual ripples. Waves add.</p>
-                                    <p><strong>Superposition:</strong> When waves overlap, the total displacement is the sum of individual displacements.</p>
-                                    <p>This explains:</p>
-                                    <ul>
-                                        <li>Interference (waves making each other louder or quieter)</li>
-                                        <li>Standing waves in rooms</li>
-                                        <li>Beats (wobbling sound when frequencies are close)</li>
-                                        <li>Harmonics and timbre</li>
-                                        <li>All of Fourier analysis</li>
-                                    </ul>
-                                    <p><strong>Understand superposition, understand most of acoustics.</strong></p>
+                                    <h3>✏️ Interactive Exercise: Build Intuition First</h3>
+                                    <p><strong>This is not homework. Do it now, before the code below. Building intuition first makes the code make sense.</strong></p>
+                                    <p>Grab a piece of paper. Draw a circle. Mark the 4 cardinal points: 0° (right), 90° (top), 180° (left), 270° (bottom). Now, at each angle, estimate what the y-coordinate (sine) would be. Try 45°, 30°, 60° too.</p>
+                                    <p>Write down: sin(0°) = ?, sin(30°) = ?, sin(45°) = ?, sin(60°) = ?, sin(90°) = ?</p>
+                                    <p>Check your answers with the table above. This builds intuition—don't skip it. You're training your brain to see sine and cosine as coordinates, not magic.</p>
                                 </div>
 
                                 <div class="lesson-block stepbystep">
-                                    <h3>🔧 Constructive & Destructive Interference</h3>
-                                    <p><strong>Constructive:</strong> Waves in phase (same timing) add up to something bigger:</p>
-                                    <div class="equation">
-                                        Wave 1: y₁ = A sin(2πft)<br>
-                                        Wave 2: y₂ = A sin(2πft)<br>
-                                        Sum: 2A sin(2πft) → LOUDER
-                                    </div>
-                                    <p><strong>Destructive:</strong> Waves out of phase (opposite timing) cancel:</p>
-                                    <div class="equation">
-                                        Wave 1: y₁ = A sin(2πft)<br>
-                                        Wave 2: y₂ = A sin(2πft + π) = -A sin(2πft)<br>
-                                        Sum: 0 → SILENCE
-                                    </div>
-                                    <p>This is how noise-cancelling headphones work.</p>
+                                    <h3>🔧 Now Code It: Draw the Unit Circle</h3>
+                                    <p>Now that you understand conceptually, let's make a computer draw it. This code creates a visual representation of exactly what we've been discussing.</p>
+                                    <pre>import matplotlib.pyplot as plt
+import numpy as np
+
+# Create angles from 0 to 2π (full circle)
+theta = np.linspace(0, 2*np.pi, 100)
+
+# Get x and y coordinates (cosine and sine)
+x = np.cos(theta)
+y = np.sin(theta)
+
+# Draw the circle
+plt.figure(figsize=(8, 8))
+plt.plot(x, y, 'b-', linewidth=2, label='Unit Circle')
+
+# Mark the centre
+plt.plot(0, 0, 'ko', markersize=8, label='Centre')
+
+# Mark the cardinal points
+plt.plot(1, 0, 'ro', markersize=8)  # 0°
+plt.plot(0, 1, 'go', markersize=8)  # 90°
+plt.plot(-1, 0, 'co', markersize=8) # 180°
+plt.plot(0, -1, 'mo', markersize=8) # 270°
+
+# Add a line to show the angle at 45°
+angle_45 = np.pi/4
+plt.plot([0, np.cos(angle_45)], [0, np.sin(angle_45)], 'r--', linewidth=1.5)
+plt.plot(np.cos(angle_45), np.sin(angle_45), 'r*', markersize=15)
+
+# Labels and formatting
+plt.grid(True, alpha=0.3)
+plt.axis('equal')
+plt.axhline(y=0, color='k', linewidth=0.5)
+plt.axvline(x=0, color='k', linewidth=0.5)
+plt.xlabel('cos(θ)', fontsize=12)
+plt.ylabel('sin(θ)', fontsize=12)
+plt.title('The Unit Circle: Sine and Cosine as Coordinates', fontsize=14)
+plt.legend()
+plt.xlim(-1.5, 1.5)
+plt.ylim(-1.5, 1.5)
+plt.show()</pre>
+                                    <p>Run this. You're drawing the unit circle. Every point on that circle has coordinates (cos(angle), sin(angle)). The x-axis is cosine, the y-axis is sine. The red dashed line shows the angle at 45°. The red star is where 45° intersects the circle—that point's coordinates are (0.707, 0.707) = (cos(45°), sin(45°)).</p>
                                 </div>
 
                                 <div class="lesson-block concept">
-                                    <h3>📖 Beats</h3>
-                                    <p>When two frequencies are slightly different, you hear wobbling. This is a <strong>beat</strong>.</p>
+                                    <h3>🎯 Part 6: Why Is Sine at 90° Equal to 1? (Understanding the Values)</h3>
+                                    <p>This is the kind of question that deepens understanding. Let's reason through it.</p>
+                                    <p>At 90°, you're pointing straight up. Your friend is at the top of the circle. The y-coordinate of straight up is maximum—they're as far up as they can be. Since the radius is 1 (one unit away from the centre), and they're pointing straight up, the y-coordinate is 1. Hence sin(90°) = 1.</p>
+                                    <p>At 0°, you're pointing right. Your friend is at the rightmost point. The y-coordinate is zero because they're not up or down at all—they're on the horizontal axis. Hence sin(0°) = 0.</p>
+                                    <p>At 180°, you're pointing left. Your friend is at the leftmost point. The y-coordinate is 0 again (they're on the horizontal axis, just on the opposite side). Sin(180°) = 0.</p>
+                                    <p>At 270°, you're pointing down. The y-coordinate is -1 (maximum downward, opposite of 90°). Sin(270°) = -1.</p>
+                                    <p>Once you understand this—that sine is the y-coordinate and the y-axis ranges from -1 to 1 on the unit circle—all the sine values make sense. They're not arbitrary. They're geometric.</p>
+                                </div>
+
+                                <div class="lesson-block stepbystep">
+                                    <h3>🔧 Visualise Sin and Cos Changing</h3>
+                                    <p>Let's show how sine and cosine change as you rotate around the circle:</p>
+                                    <pre>import matplotlib.pyplot as plt
+import numpy as np
+
+# Create a range of angles
+theta = np.linspace(0, 2*np.pi, 200)
+
+# Calculate sine and cosine
+sine_values = np.sin(theta)
+cosine_values = np.cos(theta)
+
+# Plot both on the same graph
+plt.figure(figsize=(12, 5))
+plt.plot(theta, sine_values, 'b-', linewidth=2, label='sin(θ)')
+plt.plot(theta, cosine_values, 'r-', linewidth=2, label='cos(θ)')
+
+# Mark key angles
+pi_vals = [0, np.pi/2, np.pi, 3*np.pi/2, 2*np.pi]
+pi_labels = ['0', 'π/2', 'π', '3π/2', '2π']
+plt.xticks(pi_vals, pi_labels)
+
+plt.grid(True, alpha=0.3)
+plt.axhline(y=0, color='k', linewidth=0.5)
+plt.xlabel('Angle (radians)', fontsize=12)
+plt.ylabel('Value', fontsize=12)
+plt.title('Sine and Cosine as You Rotate Around the Circle', fontsize=14)
+plt.legend(fontsize=12)
+plt.ylim(-1.5, 1.5)
+plt.show()</pre>
+                                    <p>When you run this, you see two waves. The blue one is sine. The red one is cosine. They're the same shape, just shifted 90° (π/2 radians) apart. This shift is the phase difference. At 0°, sine is 0 and cosine is 1. At 90°, sine is 1 and cosine is 0. They're out of phase.</p>
+                                </div>
+
+                                <details class="deepdive-expand">
+                                    <summary>🔬 Deep Dive: Why Cosine Lags Behind Sine (The Phase Shift)</summary>
+                                    <div class="deepdive-content">
+                                        <p>If you look at the graph above, cosine is always 90° (π/2 radians) ahead of sine. Sine starts at 0, peaks at 90°. Cosine starts at 1, reaches 0 at 90°. Why?</p>
+                                        <p>Picture the circle. Start at 0°. At that moment, sine (y-coordinate) is 0, and cosine (x-coordinate) is 1. As you rotate, the y-coordinate grows faster than the x-coordinate shrinks (geometrically). By 90°, you've swapped: y is at maximum (1), x is at 0. By 180°, both are back where they started, just mirrored. This creates the shifted wave pattern.</p>
+                                        <p>Mathematically: sin(θ) = cos(θ - π/2). Cosine is just sine shifted by 90°. Or equivalently, sin(θ + π/2) = cos(θ). This phase shift matters enormously in acoustics. Two speakers playing the same frequency with a 90° phase difference create interesting interference patterns.</p>
+                                    </div>
+                                </details>
+
+                                <div class="lesson-block practice">
+                                    <h3>📝 Exercises: Test Your Understanding</h3>
+                                    <p><strong>Before checking answers, try to reason through them from the circle picture in your head.</strong></p>
+                                    <ol>
+                                        <li>What is sin(π)? Hint: At π radians, you're at 180°. Where on the circle is that? What's the y-coordinate?</li>
+                                        <li>What is cos(π/2)? Hint: At π/2 radians, you're at 90°. What's the x-coordinate?</li>
+                                        <li>A wave is described as y = sin(2πft + π/4). What does the π/4 phase offset mean? What would the wave look like compared to y = sin(2πft) with no offset?</li>
+                                        <li>Write Python code to compute sin(30°) and sin(π/6) and verify they're the same.</li>
+                                        <li>At what angle is sin(θ) = 0.5? (Hint: look at 30°.)</li>
+                                    </ol>
+                                </div>
+
+                            </div>
+                        </details>
+
+                        <!-- MODULE 0.2: SUPERPOSITION -->
+                        <details class="module-details">
+                            <summary>0.2 Superposition — Adding Waves (CRITICAL CONCEPT)</summary>
+                            <div class="module-content">
+
+                                <div class="lesson-block concept">
+                                    <h3>🎯 Opening: Why This Is The Most Important Concept in Acoustics</h3>
+                                    <p>Drop pebbles into water. Ripples spread outward. Where two ripples meet, something interesting happens. If they're aligned (crest meets crest), the water rises higher. If they're misaligned (crest meets trough), they flatten out. This is superposition, and it explains almost everything interesting about sound.</p>
+                                    <p><strong>Superposition:</strong> When waves overlap, the total displacement is the sum of individual displacements.</p>
+                                    <p>This simple rule explains:</p>
+                                    <ul>
+                                        <li>Why two speakers can cancel each other (noise-cancelling headphones)</li>
+                                        <li>Why two speakers can reinforce each other (surround sound)</li>
+                                        <li>Why rooms have dead zones where music sounds quiet</li>
+                                        <li>Why beats happen when two pitches are close</li>
+                                        <li>Why harmonics create timbre (why a piano sounds different from a trumpet)</li>
+                                        <li>Why Fourier analysis works (all complex sounds are just sine waves added together)</li>
+                                    </ul>
+                                    <p><strong>Master superposition, and you understand most of acoustics.</strong></p>
+                                </div>
+
+                                <div class="lesson-block stepbystep">
+                                    <h3>🔍 Part 1: What Happens When Two Waves Overlap?</h3>
+                                    <p>Imagine two speakers side by side, both playing the same 440 Hz tone (A note). Each is creating a pressure wave. Sound travels at 343 m/s. When the waves reach a point in the room, they add together. The key: they don't always add the same way.</p>
+                                    <p><strong>Case 1: In Phase (Same Timing)</strong></p>
+                                    <p>If the speakers are in phase—crests from speaker A arrive at the same time as crests from speaker B—the crests add. You get bigger crests. The troughs also add (trough + trough = bigger trough). The total wave has double the amplitude.</p>
+                                    <div class="equation">
+                                        Wave 1: y₁ = A sin(2πft)<br>
+                                        Wave 2: y₂ = A sin(2πft)    [same phase, phase difference = 0]<br>
+                                        Sum: y_total = 2A sin(2πft)  → LOUDER (twice the amplitude)
+                                    </div>
+                                    <p><strong>Case 2: Out of Phase (Opposite Timing)</strong></p>
+                                    <p>If the speakers are 180° out of phase (π radians), crests from speaker A arrive when troughs arrive from speaker B. A crest and a trough cancel. The total is silence.</p>
+                                    <div class="equation">
+                                        Wave 1: y₁ = A sin(2πft)<br>
+                                        Wave 2: y₂ = A sin(2πft + π) = -A sin(2πft)  [opposite phase, phase difference = π]<br>
+                                        Sum: y_total = 0  → SILENCE (complete cancellation)
+                                    </div>
+                                    <p>This is the principle behind noise-cancelling headphones: they measure the incoming noise and generate an inverted copy that cancels it out.</p>
+                                    <p><strong>Case 3: Partial Phase Difference</strong></p>
+                                    <p>Most of the time, the phase difference is between 0 and π. The crests and troughs partially align. You get something in between—louder than one speaker alone, but not as loud as if they were perfectly in phase. The amplitude depends on the phase difference.</p>
+                                </div>
+
+                                <div class="lesson-block concept">
+                                    <h3>🎯 Part 2: Understanding Constructive and Destructive Interference</h3>
+                                    <p><strong>Constructive interference:</strong> The waves amplify each other. Crests meet crests. This happens when the phase difference is 0°, 360°, 720°, etc. (multiples of 360°, or multiples of 2π radians).</p>
+                                    <p><strong>Destructive interference:</strong> The waves cancel each other. Crests meet troughs. This happens when the phase difference is 180°, 540°, 900°, etc. (odd multiples of 180°, or odd multiples of π radians).</p>
+                                    <p>The phase difference between two waves depends on where you measure them. Two speakers 0.5 m apart playing 440 Hz won't be in phase everywhere in the room. At some distances, they reinforce. At others, they cancel. This is why room acoustics is so complex—reflections create overlapping waves at different phases throughout the space.</p>
+                                </div>
+
+                                <div class="lesson-block stepbystep">
+                                    <h3>🔍 Part 3: Beats — Superposition of Close Frequencies</h3>
+                                    <p>What if two waves have slightly different frequencies? They start in phase, then gradually go out of phase, then back in phase. This creates a wobbling effect called <strong>beats</strong>.</p>
+                                    <p>When you play 440 Hz from one speaker and 442 Hz from another, you hear a single tone that gets louder and quieter twice per second. That wobbling is the beat. It's the interference pattern between the two frequencies.</p>
                                     <div class="equation">
                                         f_beat = |f₁ - f₂|
                                     </div>
-                                    <p>Example: 440 Hz + 442 Hz = 2 Hz beat (wobbles twice per second). Musicians use beats to tune.</p>
+                                    <p>In this case, f_beat = 442 - 440 = 2 Hz. The sound gets louder and quieter 2 times per second. If you played 440 Hz and 445 Hz, f_beat would be 5 Hz (faster wobbling). Musicians use this to tune instruments: they adjust until the beat frequency disappears (two notes are the same frequency).</p>
+                                    <p><strong>Why does this happen?</strong> The two waves are represented as:</p>
+                                    <div class="equation">
+                                        y₁ = A sin(2πf₁t)<br>
+                                        y₂ = A sin(2πf₂t)<br>
+                                        y_total = A[sin(2πf₁t) + sin(2πf₂t)]
+                                    </div>
+                                    <p>When f₁ ≈ f₂, the sum creates an amplitude envelope—a slowly varying amplitude modulation on top of a carrier frequency. That modulation is the beat you hear.</p>
                                 </div>
 
                                 <div class="lesson-block stepbystep">
                                     <h3>🔧 Create Beats in Python</h3>
+                                    <p>Let's generate the beat phenomenon and listen to it:</p>
+                                    <pre>import numpy as np
+from scipy.io import wavfile
+import matplotlib.pyplot as plt
+
+# Parameters
+sr = 44100          # Sample rate (44.1 kHz)
+duration = 5        # 5 seconds
+t = np.linspace(0, duration, int(sr * duration))
+
+# Two close frequencies
+f1 = 440            # A note
+f2 = 442            # 2 Hz higher
+
+# Generate the two waves
+wave1 = 0.3 * np.sin(2 * np.pi * f1 * t)
+wave2 = 0.3 * np.sin(2 * np.pi * f2 * t)
+
+# Sum them (superposition)
+combined = wave1 + wave2
+
+# Save as audio file
+wavfile.write('beats.wav', sr, (combined * 32767).astype(np.int16))
+print(f"Beat frequency: {f2 - f1} Hz")
+print(f"Expected wobble: {f2 - f1} wobbles per second")
+
+# Plot the first 0.5 seconds to see the beat envelope
+plot_samples = int(sr * 0.5)
+plt.figure(figsize=(12, 4))
+plt.plot(t[:plot_samples], combined[:plot_samples], linewidth=1)
+plt.xlabel('Time (seconds)')
+plt.ylabel('Amplitude')
+plt.title('Beats: 440 Hz + 442 Hz (2 Hz beat frequency)')
+plt.grid(True, alpha=0.3)
+plt.show()</pre>
+                                    <p>Save this as a Python script and run it. It creates a .wav file called "beats.wav". Listen to it—you'll hear a tone that wobbles in and out (quieter, louder, quieter, etc.) twice per second. Open beats.wav in Audacity and look at the waveform. You'll see the amplitude modulation (the envelope) clearly.</p>
+                                    <p>The graph shows the first half second. Notice how the wave amplitude rises and falls—that's the beat envelope. The rapid oscillations inside are the carrier frequency (around 441 Hz, the average of 440 and 442). The slow wobbling is the beat frequency (2 Hz).</p>
+                                </div>
+
+                                <div class="lesson-block stepbystep">
+                                    <h3>🔧 Constructive vs. Destructive: Generate Examples</h3>
+                                    <p>Now let's create three .wav files showing constructive, destructive, and partial interference:</p>
                                     <pre>import numpy as np
 from scipy.io import wavfile
 
-sr = 44100  # sample rate
-dur = 5     # seconds
-t = np.linspace(0, dur, int(sr * dur))
+sr = 44100
+duration = 2
+t = np.linspace(0, duration, int(sr * duration))
+f = 440             # Frequency
 
-# Two close frequencies
-f1, f2 = 440, 442
-wave1 = 0.3 * np.sin(2 * np.pi * f1 * t)
-wave2 = 0.3 * np.sin(2 * np.pi * f2 * t)
+# Amplitude for each wave
+A = 0.3
+
+# Base wave
+wave1 = A * np.sin(2 * np.pi * f * t)
+
+# Case 1: Constructive (phase difference = 0)
+wave2_constructive = A * np.sin(2 * np.pi * f * t)  # Same phase
+combined_constructive = wave1 + wave2_constructive
+wavfile.write('constructive.wav', sr, (combined_constructive * 32767).astype(np.int16))
+print("Constructive: amplitude = 2A, twice as loud")
+
+# Case 2: Destructive (phase difference = π)
+wave2_destructive = A * np.sin(2 * np.pi * f * t + np.pi)  # Opposite phase
+combined_destructive = wave1 + wave2_destructive
+wavfile.write('destructive.wav', sr, (combined_destructive * 32767).astype(np.int16))
+print("Destructive: amplitude = 0, silence")
+
+# Case 3: Partial (phase difference = π/4)
+wave2_partial = A * np.sin(2 * np.pi * f * t + np.pi/4)
+combined_partial = wave1 + wave2_partial
+wavfile.write('partial.wav', sr, (combined_partial * 32767).astype(np.int16))
+print("Partial (π/4 phase offset): in between")
+
+# Let's verify the amplitudes
+amp_constructive = np.max(np.abs(combined_constructive))
+amp_destructive = np.max(np.abs(combined_destructive))
+amp_partial = np.max(np.abs(combined_partial))
+
+print(f"\nAmplitude results:")
+print(f"Constructive: {amp_constructive:.3f} (should be ~{2*A:.3f})")
+print(f"Destructive: {amp_destructive:.6f} (should be ~0)")
+print(f"Partial: {amp_partial:.3f} (should be between 0 and {2*A:.3f})")</pre>
+                                    <p>This creates three files. The constructive one will sound noticeably louder (twice as loud). The destructive one will be nearly silent. The partial one will be somewhere in between. Listen to all three. This teaches your ears what phase differences sound like.</p>
+                                </div>
+
+                                <div class="lesson-block concept">
+                                    <h3>🎯 Part 4: Why Phase Matters in Real Rooms</h3>
+                                    <p>In a concert hall, sound doesn't just travel directly from the speaker to your ear. It bounces off walls, ceiling, floor. Each reflection creates a new "copy" of the sound arriving at your ear at a slightly different time. That delay creates a phase difference.</p>
+                                    <p>A reflection from the back wall might arrive 0.05 seconds later than the direct sound. If you're listening to 1000 Hz, that's a phase shift of:</p>
+                                    <p>Phase shift = (delay in time) × (frequency in Hz) × (2π) = 0.05 × 1000 × 2π ≈ 314 radians ≈ π radians (after wrapping). Roughly opposite phase. That frequency gets partially cancelled by its reflection.</p>
+                                    <p>This is why some rooms sound "boomy" at certain frequencies and "thin" at others. The reflections create constructive and destructive interference at different frequencies. Room acoustic treatment aims to either absorb reflections (so they don't interfere) or reflect them in ways that create constructive interference (reinforcing the direct sound).</p>
+                                </div>
+
+                                <div class="lesson-block stepbystep">
+                                    <h3>🔧 Verify the Beat Formula</h3>
+                                    <p>Let's confirm mathematically why the beat frequency equals the difference between the two frequencies:</p>
+                                    <pre>import numpy as np
+import matplotlib.pyplot as plt
+
+# Two frequencies
+f1, f2 = 440, 444    # 4 Hz difference
+t = np.linspace(0, 2, 4410)  # 2 seconds at 44.1 kHz
+
+# Two waves
+wave1 = np.sin(2 * np.pi * f1 * t)
+wave2 = np.sin(2 * np.pi * f2 * t)
 combined = wave1 + wave2
 
-# Save
-wavfile.write('beats.wav', sr, (combined * 32767).astype(np.int16))
-print(f"Beat freq = {f2 - f1} Hz")</pre>
-                                    <p>Open in Audacity to see the amplitude wobbling.</p>
+# The envelope of the combined wave oscillates at the beat frequency
+envelope_frequency = abs(f2 - f1)
+print(f"f1 = {f1} Hz")
+print(f"f2 = {f2} Hz")
+print(f"Predicted beat frequency = {f2 - f1} Hz")
+
+# Plot a short window
+window = int(2.5 * 4410 / 10)  # First 0.25 seconds
+plt.figure(figsize=(14, 4))
+plt.plot(t[:window], combined[:window], linewidth=0.5, alpha=0.7, label='Combined wave')
+plt.plot(t[:window], np.abs(combined[:window]), 'r-', linewidth=2, label='Envelope (beat)')
+plt.xlabel('Time (seconds)')
+plt.ylabel('Amplitude')
+plt.title(f'Beats from {f1} Hz + {f2} Hz (beat freq = {f2-f1} Hz)')
+plt.legend()
+plt.grid(True, alpha=0.3)
+plt.show()</pre>
+                                    <p>Run this. You'll see the rapid oscillations (the 440 Hz and 444 Hz mixing) with a slower envelope overlaid in red. That red envelope oscillates at the beat frequency. Count how many times it goes from quiet to loud to quiet again. It should match the beat frequency (4 times per second in this example).</p>
                                 </div>
 
+                                <details class="deepdive-expand">
+                                    <summary>🔬 Deep Dive: Deriving the Beat Formula Mathematically</summary>
+                                    <div class="deepdive-content">
+                                        <p>If you sum two sine waves with slightly different frequencies:</p>
+                                        <p>y = sin(2πf₁t) + sin(2πf₂t)</p>
+                                        <p>Using the sum-to-product identity (a useful trig identity):</p>
+                                        <p>sin(A) + sin(B) = 2 sin((A+B)/2) cos((A-B)/2)</p>
+                                        <p>Setting A = 2πf₁t and B = 2πf₂t:</p>
+                                        <p>y = 2 sin(π(f₁+f₂)t) cos(π(f₂-f₁)t)</p>
+                                        <p>The first part, sin(π(f₁+f₂)t), is a sine wave at the average frequency. The second part, cos(π(f₂-f₁)t), is the amplitude modulation (the envelope). It oscillates at frequency |f₂-f₁|. That's the beat frequency.</p>
+                                        <p>So the beat frequency = |f₂ - f₁|. Not derived from magic—it's pure algebra applied to sine waves.</p>
+                                    </div>
+                                </details>
+
                                 <div class="lesson-block practice">
-                                    <h3>📝 Homework</h3>
-                                    <p><strong>Question 1:</strong> Two speakers play 1000 Hz. Speaker A is 0.1 m from you, speaker B is 0.15 m away. Speed of sound = 343 m/s. What's the phase difference?</p>
-                                    <p><strong>Question 2:</strong> Modify the Python code above to create three .wav files: constructive (same phase), destructive (opposite phase), and partial (phase difference = π/4).</p>
+                                    <h3>📝 Exercises</h3>
+                                    <ol>
+                                        <li><strong>Phase difference and interference:</strong> Two speakers play the same 500 Hz tone. Speaker A is 0.5 m from your ear, speaker B is 1.0 m away. The speed of sound is 343 m/s. What's the time delay? What's the phase difference (in radians)? Is it constructive or destructive?</li>
+                                        <li><strong>Creating beats:</strong> Modify the Python code to generate 550 Hz + 555 Hz. What beat frequency do you expect? Run it and verify.</li>
+                                        <li><strong>Understanding interference:</strong> Explain in words: why would removing one of the speakers at a location where they were destructively interfering make the sound louder?</li>
+                                        <li><strong>Room reflections:</strong> A 100 Hz tone is reflected from a wall 3.43 m away. The speed of sound is 343 m/s. Calculate the reflection delay. What's the phase difference between direct and reflected sound?</li>
+                                    </ol>
                                 </div>
+
                             </div>
                         </details>
 
+                        <!-- MODULE 0.3: ALGEBRA TOOLS -->
                         <details class="module-details">
                             <summary>0.3 Algebra Tools for Acoustics</summary>
                             <div class="module-content">
+
                                 <div class="lesson-block concept">
-                                    <h3>📖 Rearranging Equations</h3>
-                                    <p>Key skill: whatever you do to one side, do to the other.</p>
-                                    <p>Example: c = f λ</p>
+                                    <h3>🎯 Rearranging Equations: The Core Skill</h3>
+                                    <p>Most of acoustics involves equations. You'll constantly need to solve for different variables. The rule is simple: whatever you do to one side of an equation, do to the other side. That's it.</p>
+                                    <p><strong>Example:</strong> c = f λ (speed of sound = frequency × wavelength)</p>
                                     <ul>
-                                        <li>Want λ? Divide both sides by f: λ = c/f</li>
-                                        <li>Want f? Divide both sides by λ: f = c/λ</li>
+                                        <li><strong>Want to find λ (wavelength)?</strong> Divide both sides by f: λ = c/f</li>
+                                        <li><strong>Want to find f (frequency)?</strong> Divide both sides by λ: f = c/λ</li>
+                                        <li><strong>Want to find c (speed)?</strong> It's already isolated: c = f λ</li>
                                     </ul>
                                 </div>
 
+                                <div class="lesson-block stepbystep">
+                                    <h3>🔧 Common Rearrangements in Acoustics</h3>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Original</th>
+                                                <th>Solve for f</th>
+                                                <th>Solve for λ</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>c = f λ</td>
+                                                <td>f = c / λ</td>
+                                                <td>λ = c / f</td>
+                                            </tr>
+                                            <tr>
+                                                <td>I = P / A</td>
+                                                <td>P = I × A</td>
+                                                <td>A = P / I</td>
+                                            </tr>
+                                            <tr>
+                                                <td>P = F / A</td>
+                                                <td colspan="2">F = P × A</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
                                 <div class="lesson-block concept">
-                                    <h3>📖 Scientific Notation</h3>
-                                    <p>Acoustics spans huge ranges. Instead of writing 0.0000001, write 1 × 10⁻⁷.</p>
+                                    <h3>🎯 Scientific Notation: Handling Huge and Tiny Numbers</h3>
+                                    <p>Acoustics spans enormous ranges. Sound intensity ranges from 10⁻¹² W/m² (threshold of hearing) to 1 W/m² (painful). Rather than writing 0.000000000001, we write 1 × 10⁻¹².</p>
+                                    <p><strong>Quick refresher:</strong></p>
+                                    <ul>
+                                        <li>0.0000001 = 1 × 10⁻⁷ (move decimal 7 places left)</li>
+                                        <li>100,000 = 1 × 10⁵ (move decimal 5 places right)</li>
+                                        <li>3.5 million = 3.5 × 10⁶</li>
+                                        <li>0.00045 = 4.5 × 10⁻⁴</li>
+                                    </ul>
+                                    <p><strong>Multiplying:</strong> 10ᵃ × 10ᵇ = 10^(a+b)</p>
+                                    <p><strong>Dividing:</strong> 10ᵃ / 10ᵇ = 10^(a-b)</p>
                                     <div class="equation">
-                                        0.0000001 = 1 × 10⁻⁷<br>
-                                        100,000 = 1 × 10⁵<br>
-                                        10ᵃ × 10ᵇ = 10^(a+b)<br>
-                                        10ᵃ / 10ᵇ = 10^(a-b)
+                                        Example: (2 × 10⁻⁵) × (3 × 10⁸) = 6 × 10³
                                     </div>
                                 </div>
 
                                 <div class="lesson-block concept">
-                                    <h3>📖 Units</h3>
-                                    <p>Every number needs units. Convert by multiplying by fractions that equal 1.</p>
-                                    <p>Example: 5 km to metres:</p>
+                                    <h3>🎯 Units: Every Number Needs Them</h3>
+                                    <p>A number without units is meaningless. 343 could be metres per second (speed of sound), or centimetres per second (a very slow speed), or something else entirely. Always include units.</p>
+                                    <p><strong>Converting units:</strong> Multiply by a conversion factor that equals 1.</p>
+                                    <p><strong>Example:</strong> Convert 5 km to metres.</p>
                                     <div class="equation">
                                         5 km × (1000 m / 1 km) = 5000 m
+                                    </div>
+                                    <p>The km cancels, leaving m. The conversion factor (1000 m / 1 km) equals 1 (one kilometre is 1000 metres), so multiplying doesn't change the value, just the units.</p>
+                                    <p><strong>Another example:</strong> Convert 343 m/s to km/h.</p>
+                                    <div class="equation">
+                                        343 m/s × (3600 s / 1 h) × (1 km / 1000 m)<br>
+                                        = (343 × 3600 / 1000) km/h<br>
+                                        = 1234.8 km/h
                                     </div>
                                 </div>
 
                                 <div class="lesson-block practice">
-                                    <h3>📝 Homework</h3>
+                                    <h3>📝 Exercises</h3>
                                     <p><strong>Rearrange for the requested variable:</strong></p>
                                     <ol>
                                         <li>P = F/A, solve for F</li>
                                         <li>I = P/A, solve for A</li>
                                         <li>c = fλ, solve for f</li>
+                                        <li>T = 1/f, solve for f</li>
                                     </ol>
-                                    <p><strong>Convert:</strong></p>
+                                    <p><strong>Scientific notation:</strong></p>
                                     <ol>
-                                        <li>343 m/s to km/h</li>
-                                        <li>50 microwatts to watts</li>
+                                        <li>Write 0.00034 in scientific notation</li>
+                                        <li>Write 2.5 × 10⁻⁶ in decimal</li>
+                                        <li>Multiply: (1.5 × 10⁻⁴) × (2 × 10⁷) = ?</li>
+                                    </ol>
+                                    <p><strong>Unit conversion:</strong></p>
+                                    <ol>
+                                        <li>Convert 343 m/s to km/h</li>
+                                        <li>Convert 50 microwatts (µW) to watts (W). Hint: 1 µW = 10⁻⁶ W</li>
+                                        <li>A loudspeaker produces 120 dB SPL. The reference intensity is 10⁻¹² W/m². Calculate the actual intensity in W/m². (Hint: dB = 10 log₁₀(I/I_ref))</li>
                                     </ol>
                                 </div>
+
                             </div>
                         </details>
+
                     </div>
                 </details>
             </div>
@@ -739,473 +1232,205 @@ print(f"Beat freq = {f2 - f1} Hz")</pre>
                         <span class="chevron">▼</span>
                     </summary>
                     <div class="phase-content">
-
-                        <details class="module-details">
-                            <summary>1.1 What Sound Actually Is</summary>
-                            <div class="module-content">
-                                <div class="lesson-block concept">
-                                    <h3>📖 Longitudinal Waves and Pressure</h3>
-                                    <p><strong>Opening analogy:</strong> A line of people standing together. One pushes forward, then back. The disturbance propagates down the line. Each person doesn't travel far—just jiggles back and forth. That's sound.</p>
-                                    <p>Sound is a <strong>longitudinal wave</strong>—disturbance parallel to propagation direction. Air molecules jiggle back and forth. The jiggling propagates outward as a pressure wave.</p>
-                                    <p><strong>Light vs Sound:</strong></p>
-                                    <ul>
-                                        <li><strong>Light:</strong> transverse (oscillates perpendicular to travel), no medium needed</li>
-                                        <li><strong>Sound:</strong> longitudinal (oscillates parallel to travel), needs a medium</li>
-                                    </ul>
-                                </div>
-
-                                <div class="lesson-block concept">
-                                    <h3>📖 Speed of Sound</h3>
-                                    <p>Depends on stiffness (resists compression) and density:</p>
-                                    <div class="equation">
-                                        c = √(stiffness / density)
-                                    </div>
-                                    <p><strong>Common speeds:</strong></p>
-                                    <ul>
-                                        <li>Air (20°C): ~343 m/s</li>
-                                        <li>Water: ~1480 m/s (5× faster)</li>
-                                        <li>Steel: ~5960 m/s (very stiff)</li>
-                                        <li>Foam: ~500 m/s (soft, squishy)</li>
-                                    </ul>
-                                    <p><strong>Temperature dependence:</strong> c(T) ≈ 331 + 0.6 × T_celsius</p>
-                                </div>
-
-                                <div class="lesson-block stepbystep">
-                                    <h3>🔧 Quick Calculations</h3>
-                                    <p><strong>Example 1:</strong> Sound travels 30 m to a wall. How long for the echo?</p>
-                                    <p>time = distance / speed = 30 / 343 ≈ 0.087 s</p>
-                                    <p><strong>Example 2:</strong> 40 kHz ultrasound. Wavelength?</p>
-                                    <p>λ = c / f = 343 / 40000 ≈ 0.0086 m = 8.6 mm</p>
-                                </div>
-
-                                <div class="lesson-block practice">
-                                    <h3>📝 Homework</h3>
-                                    <p><strong>Q1:</strong> Why does sound pass through a window but light gets reflected by fog?</p>
-                                    <p><strong>Q2:</strong> Sound underwater travels 1480 m/s. How long to travel 100 m? Compare to air.</p>
-                                    <p><strong>Q3:</strong> You're 100 m from a cliff. You clap. How long until echo?</p>
-                                </div>
-                            </div>
-                        </details>
-
-                        <details class="module-details">
-                            <summary>1.2 Acoustic Quantities: Frequency, Wavelength, Amplitude, c = fλ</summary>
-                            <div class="module-content">
-                                <div class="lesson-block concept">
-                                    <h3>📖 Frequency</h3>
-                                    <p>Number of cycles per second. Unit: Hertz (Hz).</p>
-                                    <ul>
-                                        <li>20 Hz: subsonic vibration</li>
-                                        <li>100 Hz: deep bass</li>
-                                        <li>440 Hz: A note (musical reference)</li>
-                                        <li>1000 Hz: treble, easy to hear</li>
-                                        <li>20000 Hz: upper limit of human hearing</li>
-                                        <li>40000 Hz: ultrasound</li>
-                                    </ul>
-                                    <p>You perceive frequency as <strong>pitch</strong>.</p>
-                                </div>
-
-                                <div class="lesson-block concept">
-                                    <h3>📖 Wavelength</h3>
-                                    <p>Distance from one peak to the next. Symbol: λ.</p>
-                                    <div class="equation">
-                                        20 Hz: λ ≈ 17 m (huge!)<br>
-                                        100 Hz: λ ≈ 3.4 m<br>
-                                        1000 Hz: λ ≈ 34 cm<br>
-                                        10000 Hz: λ ≈ 34 mm
-                                    </div>
-                                    <p><strong>Why it matters:</strong> Room modes (frequencies matching room size resonate). Loudspeaker design (cones must move ~λ distance). Interference patterns.</p>
-                                </div>
-
-                                <div class="lesson-block concept">
-                                    <h3>📖 Amplitude</h3>
-                                    <p>Maximum displacement from rest. Measured in Pascals (Pa).</p>
-                                    <ul>
-                                        <li>Threshold of hearing: 20 μPa</li>
-                                        <li>Normal conversation: ~0.02 Pa</li>
-                                        <li>Loud music: ~0.2 Pa</li>
-                                        <li>Jet engine: ~200 Pa</li>
-                                        <li>Threshold of pain: ~20 Pa</li>
-                                    </ul>
-                                    <p>10-million-fold range! This is why we use logarithmic scales (decibels).</p>
-                                </div>
-
-                                <div class="lesson-block concept">
-                                    <h3>📖 The Wave Equation: c = fλ (THE Formula)</h3>
-                                    <div class="equation">
-                                        c = f λ
-                                    </div>
-                                    <p>In any medium, speed is constant. High frequency → short wavelength. Low frequency → long wavelength.</p>
-                                    <p><strong>Worked example:</strong> 256 Hz (middle C). Wavelength?</p>
-                                    <p>λ = c / f = 343 / 256 ≈ 1.34 m</p>
-                                    <p><strong>Phase difference example:</strong> Two mics 17 cm apart, measuring 1000 Hz. Phase difference?</p>
-                                    <p>λ = 343 / 1000 = 0.343 m. Fraction: 0.17 / 0.343 ≈ 0.5. Phase: 0.5 × 2π = π (180° out of phase)</p>
-                                </div>
-
-                                <div class="lesson-block stepbystep">
-                                    <h3>🔧 Intensity Formula</h3>
-                                    <p>Power per area. Relates pressure to intensity:</p>
-                                    <div class="equation">
-                                        I = p² / (ρc)
-                                    </div>
-                                    <p>For air: ρc ≈ 410 kg/(m²s).</p>
-                                    <p><strong>Example:</strong> 0.01 Pa pressure. Intensity?</p>
-                                    <p>I = (0.01)² / 410 ≈ 2.4 × 10⁻⁷ W/m²</p>
-                                </div>
-
-                                <div class="lesson-block practice">
-                                    <h3>📝 Homework</h3>
-                                    <p><strong>Q1:</strong> Wavelengths at 50 Hz, 200 Hz, 1000 Hz, 5000 Hz, 16000 Hz?</p>
-                                    <p><strong>Q2:</strong> Concert hall is 40 m long. What frequency has λ = 40 m?</p>
-                                    <p><strong>Q3:</strong> Two 2000 Hz speakers 0.086 m apart. Phase difference?</p>
-                                    <p><strong>Q4:</strong> Pressure 0.1 Pa at 1000 Hz. Intensity? (Use I = p²/(ρc) with ρc = 410)</p>
-                                </div>
-                            </div>
-                        </details>
-
-                        <details class="module-details">
-                            <summary>1.3 Decibels and Sound Pressure Level (SPL)</summary>
-                            <div class="module-content">
-                                <div class="lesson-block concept">
-                                    <h3>📖 Why Logarithms (Human Ears Respond to Ratios)</h3>
-                                    <p>Your ear doesn't perceive linearly. Doubling pressure = barely noticeable. Need 10× pressure for roughly "twice as loud."</p>
-                                    <p>Range: threshold of hearing (20 μPa) to pain (20 Pa) = millionfold! Logarithms compress this.</p>
-                                    <p><strong>Decibel formula:</strong></p>
-                                    <div class="equation">
-                                        L_p = 20 log₁₀(p / p_ref)
-                                    </div>
-                                    <p>p_ref = 20 μPa (threshold of hearing) = 0 dB SPL.</p>
-                                </div>
-
-                                <div class="lesson-block stepbystep">
-                                    <h3>🔧 Calculating dB</h3>
-                                    <p><strong>Example 1:</strong> Threshold of hearing: p = 20 μPa</p>
-                                    <div class="equation">
-                                        L = 20 log₁₀(20×10⁻⁶ / 20×10⁻⁶) = 20 log₁₀(1) = 0 dB ✓
-                                    </div>
-                                    <p><strong>Example 2:</strong> Normal conversation ≈ 60 dB. What pressure?</p>
-                                    <div class="equation">
-                                        60 = 20 log₁₀(p / 20×10⁻⁶)<br>
-                                        3 = log₁₀(p / 20×10⁻⁶)<br>
-                                        p = 1000 × 20×10⁻⁶ = 0.02 Pa
-                                    </div>
-                                    <p><strong>Rule of thumb: Doubling pressure = +6 dB</strong></p>
-                                    <p><strong>Example 3:</strong> Speaker at 94 dB. Move half the distance (intensity quadruples = pressure doubles). New SPL = 94 + 6 = 100 dB.</p>
-                                </div>
-
-                                <div class="lesson-block concept">
-                                    <h3>📖 SPL Reference Values</h3>
-                                    <table>
-                                        <tr><td>Sound</td><td>SPL</td><td>Pressure</td></tr>
-                                        <tr><td>Threshold</td><td>0 dB</td><td>20 μPa</td></tr>
-                                        <tr><td>Normal conversation</td><td>60 dB</td><td>0.02 Pa</td></tr>
-                                        <tr><td>Traffic</td><td>70 dB</td><td>0.063 Pa</td></tr>
-                                        <tr><td>Lawn mower</td><td>90 dB</td><td>0.63 Pa</td></tr>
-                                        <tr><td>Rock concert</td><td>110 dB</td><td>6.3 Pa</td></tr>
-                                        <tr><td>Threshold of pain</td><td>130 dB</td><td>63 Pa</td></tr>
-                                    </table>
-                                    <p>Every 20 dB = 10× pressure.</p>
-                                </div>
-
-                                <div class="lesson-block concept">
-                                    <h3>📖 A-Weighting</h3>
-                                    <p>Human ears aren't equally sensitive to all frequencies. Sensitive around 2-4 kHz. Less sensitive to very low and very high frequencies.</p>
-                                    <p><strong>A-weighted decibels (dB A)</strong> match human perception. 50 Hz at 70 dB SPL might be 50 dB A (sounds much quieter).</p>
-                                    <p><strong>Use dB A when:</strong> Environmental noise, anything where perception matters.</p>
-                                    <p><strong>Use dB SPL when:</strong> Acoustic engineering, specific frequencies.</p>
-                                </div>
-
-                                <div class="lesson-block practice">
-                                    <h3>📝 Homework</h3>
-                                    <p><strong>Q1:</strong> Calculate SPL for: p = 0.1 Pa, 0.01 Pa, 0.001 Pa</p>
-                                    <p><strong>Q2:</strong> Speaker produces 70 dB SPL. What pressure?</p>
-                                    <p><strong>Q3:</strong> Add identical speaker in phase. Combined SPL?</p>
-                                    <p><strong>Q4:</strong> Explain: 50 Hz at 70 dB SPL vs 50 dB A (humans hear it as quieter).</p>
-                                </div>
-                            </div>
-                        </details>
-
-                        <details class="module-details">
-                            <summary>1.4 Your First Measurement — RT60 (Reverb Time)</summary>
-                            <div class="module-content">
-                                <div class="lesson-block concept">
-                                    <h3>📖 What is RT60?</h3>
-                                    <p>Time for sound to decay 60 dB after source stops (drops to 1-millionth intensity).</p>
-                                    <ul>
-                                        <li><strong>Dead room:</strong> RT60 ≈ 0.3 s (studio with foam)</li>
-                                        <li><strong>Living room:</strong> RT60 ≈ 0.5-1.0 s</li>
-                                        <li><strong>Concert hall:</strong> RT60 ≈ 1.5-2.5 s</li>
-                                        <li><strong>Cathedral:</strong> RT60 ≈ 3-5+ s</li>
-                                    </ul>
-                                    <p><strong>Why it matters:</strong> Speech clarity, music character, acoustic design. Varies with frequency.</p>
-                                </div>
-
-                                <div class="lesson-block concept">
-                                    <h3>📖 Sabine Equation</h3>
-                                    <div class="equation">
-                                        RT60 = 0.161 × V / A
-                                    </div>
-                                    <p>V = room volume (m³). A = total absorption (sabins). 1 sabin = absorption of 1 m² perfectly absorbing surface.</p>
-                                    <p><strong>Worked example:</strong> Studio 4×5×3 m, panels α = 0.8.</p>
-                                    <p>V = 60 m³. Area = 40 + 30 + 24 = 94 m². A = 94 × 0.8 = 75.2 sabins.</p>
-                                    <p>RT60 = 0.161 × 60 / 75.2 ≈ 0.13 s (very dead)</p>
-                                </div>
-
-                                <div class="lesson-block stepbystep">
-                                    <h3>🔧 Measure RT60 with REW</h3>
-                                    <p><strong>Step 1:</strong> Download REW from roomeqwizard.com. Install.</p>
-                                    <p><strong>Step 2:</strong> Open REW. Measure → Microphone and Speaker Setup. Select inputs/outputs.</p>
-                                    <p><strong>Step 3:</strong> Tools → Generate Sweep. 20 Hz to 20 kHz, 10-30 s duration.</p>
-                                    <p><strong>Step 4:</strong> Play sweep. REW records decay after it ends.</p>
-                                    <p><strong>Step 5:</strong> Tools → Impulse Response. REW calculates RT60 at different frequencies.</p>
-                                    <p><strong>Interpret:</strong> If RT60 varies a lot, room has uneven absorption. Bass longer than treble? Need more bass treatment.</p>
-                                </div>
-
-                                <div class="lesson-block practice">
-                                    <h3>📝 Homework</h3>
-                                    <p><strong>Q1:</strong> Room 6×8×3 m, α = 0.3. Estimate RT60.</p>
-                                    <p><strong>Q2:</strong> Measured RT60 in bedroom: 0.5 s at 1000 Hz. Room 4×3×2.8 m. Total absorption?</p>
-                                    <p><strong>Q3:</strong> Design podcast studio. Want RT60 ≈ 0.4 s. Studio 4×4×2.5 m. How many sabins needed?</p>
-                                    <p><strong>Practical:</strong> If you have REW, measure your room. Record RT60 at 125, 500, 1000, 4000 Hz. Describe acoustic character (boomy? dead?)</p>
-                                </div>
-                            </div>
-                        </details>
+                        <div class="coming-soon">
+                            <h3>Phase 1 - Coming Soon</h3>
+                            <p>This phase covers the physics of sound waves, acoustic quantities, and measurement fundamentals. It will be updated with the new soft colour scheme and improved teaching approach.</p>
+                        </div>
                     </div>
                 </details>
             </div>
 
-            <!-- PHASE 2 -->
+            <!-- PHASE 2-10 PLACEHOLDER -->
             <div class="phase">
                 <details class="phase-details">
                     <summary>
                         <div class="phase-title">
                             <div class="phase-number">2</div>
                             <div class="phase-title-text">
-                                <h2>Mathematics for Acoustics</h2>
-                                <p>Weeks 15–26 • The mathematical toolkit that unlocks everything from here on</p>
+                                <h2>Measuring Sound: Practical Fundamentals</h2>
+                                <p>Weeks 15-22 • SPL, frequency analysis, basic tools</p>
                             </div>
                         </div>
                         <span class="chevron">▼</span>
                     </summary>
                     <div class="phase-content">
-                        <p style="color:#a0a0a0; margin-bottom:1.5rem;">This is the phase where the maths catches up with the physics. Every concept here directly powers a later module — logarithms for decibels, complex numbers for impedance and filters, Fourier for frequency analysis, and calculus for understanding how waves propagate and change.</p>
-                        <details class="module-details"><summary>2.1 Logarithms in Depth</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>Properties of logarithms, change of base, log scales in acoustics. Why every frequency axis you'll ever see is logarithmic. Worked examples converting between dB and linear scales.</p></div></div></details>
-                        <details class="module-details"><summary>2.2 Complex Numbers</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>The Argand diagram, magnitude and phase, Euler's formula (e^jθ = cos θ + j sin θ), and why a single complex number encodes both amplitude and timing. This is the language of impedance, filters, and the Fourier Transform.</p></div></div></details>
-                        <details class="module-details"><summary>2.3 Introduction to Calculus</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>Derivatives as rates of change, integrals as accumulation. The key fact: d/dt sin(t) = cos(t). Just enough to understand the wave equation and how pressure and velocity relate in a sound wave.</p></div></div></details>
-                        <details class="module-details"><summary>2.4 Fourier Series — Every Sound is Sines</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>How any periodic waveform decomposes into a sum of harmonics. Building a square wave from sines. Why instruments have different timbres. Connecting to the harmonic series in music.</p></div></div></details>
-                        <details class="module-details"><summary>2.5 The FFT — Your Most Powerful Tool</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>The Discrete Fourier Transform and its fast algorithm. Frequency resolution, windowing, spectrograms. Building a live spectrum analyser in Python. This tool appears in every phase from here on.</p></div></div></details>
-                        <details class="module-details"><summary>2.6 Differential Equations for Waves</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>The wave equation in one dimension. Simple harmonic motion as the foundation of all oscillation. How boundary conditions create standing waves and room modes.</p></div></div></details>
+                        <div class="coming-soon">
+                            <h3>Phase 2 - Coming Soon</h3>
+                            <p>This phase will cover sound pressure level measurement, frequency analysis, and introduction to REW and other measurement tools.</p>
+                        </div>
                     </div>
                 </details>
             </div>
 
-            <!-- PHASE 3 -->
             <div class="phase">
                 <details class="phase-details">
                     <summary>
                         <div class="phase-title">
                             <div class="phase-number">3</div>
                             <div class="phase-title-text">
-                                <h2>Electroacoustics</h2>
-                                <p>Weeks 27–34 • Microphones, loudspeakers, and the physics of transducers</p>
+                                <h2>Fourier Analysis and Spectra</h2>
+                                <p>Weeks 23-30 • Breaking sounds into frequencies</p>
                             </div>
                         </div>
                         <span class="chevron">▼</span>
                     </summary>
                     <div class="phase-content">
-                        <p style="color:#a0a0a0; margin-bottom:1.5rem;">Transducers convert between electrical and acoustic energy. Understanding how microphones hear and loudspeakers speak — at the physics level — is essential for anyone designing, measuring, or troubleshooting audio systems.</p>
-                        <details class="module-details"><summary>3.1 Microphones — How They Hear</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>Capsule types (condenser, dynamic, ribbon), polar patterns (omni, cardioid, figure-8), frequency response, self-noise, sensitivity. How to read a microphone spec sheet and understand what it means physically.</p></div></div></details>
-                        <details class="module-details"><summary>3.2 Loudspeakers — How They Speak</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>Moving-coil driver physics, cone behaviour, Thiele-Small parameters, enclosure types (sealed, ported, transmission line). Designing a speaker enclosure from first principles.</p></div></div></details>
-                        <details class="module-details"><summary>3.3 Transducer Modelling</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>Lumped parameter models — treating mechanical and acoustic systems as electrical circuits. The electrical-mechanical-acoustic analogy. Impedance curves and what they reveal about driver behaviour.</p></div></div></details>
+                        <div class="coming-soon">
+                            <h3>Phase 3 - Coming Soon</h3>
+                            <p>This phase introduces Fourier transforms, frequency spectra, and spectral analysis tools.</p>
+                        </div>
                     </div>
                 </details>
             </div>
 
-            <!-- PHASE 4 -->
             <div class="phase">
                 <details class="phase-details">
                     <summary>
                         <div class="phase-title">
                             <div class="phase-number">4</div>
                             <div class="phase-title-text">
-                                <h2>Room &amp; Building Acoustics</h2>
-                                <p>Weeks 35–44 • How spaces shape sound, and how to control it</p>
+                                <h2>Room Acoustics and Standing Waves</h2>
+                                <p>Weeks 31-38 • How rooms affect sound</p>
                             </div>
                         </div>
                         <span class="chevron">▼</span>
                     </summary>
                     <div class="phase-content">
-                        <p style="color:#a0a0a0; margin-bottom:1.5rem;">Every room is an acoustic instrument — it colours every sound within it. This phase covers the physics of enclosed spaces, from the standing waves that plague small rooms to the design principles behind concert halls, studios, and classrooms.</p>
-                        <details class="module-details"><summary>4.1 Room Modes and Standing Waves</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>Axial, tangential, and oblique modes. The mode formula for rectangular rooms. Schroeder frequency — the boundary between modal and diffuse behaviour. Measuring and mapping modes with REW.</p></div></div></details>
-                        <details class="module-details"><summary>4.2 Absorption, Diffusion, and Treatment</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>Absorption coefficients, porous absorbers (rock wool, foam), membrane absorbers, Helmholtz resonators. Diffuser design (QRD, skyline). Designing a treatment plan for a real room.</p></div></div></details>
-                        <details class="module-details"><summary>4.3 Sound Insulation and Transmission Loss</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>The mass law, coincidence frequency, double-leaf constructions, flanking paths. STC and Rw ratings. Why your neighbour's bass goes through the wall but their voice doesn't.</p></div></div></details>
-                        <details class="module-details"><summary>4.4 Acoustic Design</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>Design criteria for concert halls, recording studios, classrooms, and open-plan offices. Balancing RT60, background noise (NC curves), speech intelligibility (STI), and early reflections.</p></div></div></details>
+                        <div class="coming-soon">
+                            <h3>Phase 4 - Coming Soon</h3>
+                            <p>This phase covers room modes, standing waves, and acoustic treatment strategies.</p>
+                        </div>
                     </div>
                 </details>
             </div>
 
-            <!-- PHASE 5 -->
             <div class="phase">
                 <details class="phase-details">
                     <summary>
                         <div class="phase-title">
                             <div class="phase-number">5</div>
                             <div class="phase-title-text">
-                                <h2>Electronics &amp; Analog Signal Processing</h2>
-                                <p>Weeks 45–54 • The circuits that shape sound before it becomes air</p>
+                                <h2>Signal Processing Fundamentals</h2>
+                                <p>Weeks 39-46 • Filtering, convolution, digital audio</p>
                             </div>
                         </div>
                         <span class="chevron">▼</span>
                     </summary>
                     <div class="phase-content">
-                        <p style="color:#a0a0a0; margin-bottom:1.5rem;">Filters, crossovers, and amplifiers are the bridge between digital theory and physical sound. This phase connects complex number maths to real circuits you can build and measure on a breadboard.</p>
-                        <details class="module-details"><summary>5.1 Impedance and Reactance</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>Complex impedance of R, L, and C components. Frequency dependence. Why capacitors block DC and pass AC. Ohm's law in complex form. Practical impedance measurement.</p></div></div></details>
-                        <details class="module-details"><summary>5.2 Passive Filters and Crossovers</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>RC low-pass and high-pass filters. Cutoff frequency formula. Bode plots by hand and in LTspice. Speaker crossover design — first, second, and fourth order. Butterworth vs Linkwitz-Riley alignments.</p></div></div></details>
-                        <details class="module-details"><summary>5.3 Active Filters and Op-Amps</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>Op-amp fundamentals, Sallen-Key topology, state-variable filters, parametric EQ circuits. Q factor and its effect on filter shape. Building and measuring real filters.</p></div></div></details>
-                        <details class="module-details"><summary>5.4 Amplifier Basics for Audio</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>Class A, AB, and D amplifier topologies. Gain staging, headroom, distortion. Why Class D is everywhere now (it's PWM — something many makers already understand). Power, impedance matching, and damping factor.</p></div></div></details>
+                        <div class="coming-soon">
+                            <h3>Phase 5 - Coming Soon</h3>
+                            <p>This phase introduces digital signal processing, filters, and audio coding.</p>
+                        </div>
                     </div>
                 </details>
             </div>
 
-            <!-- PHASE 6 -->
             <div class="phase">
                 <details class="phase-details">
                     <summary>
                         <div class="phase-title">
                             <div class="phase-number">6</div>
                             <div class="phase-title-text">
-                                <h2>Digital Signal Processing</h2>
-                                <p>Weeks 55–68 • Where maths, code, and sound become the same thing</p>
+                                <h2>Transducers: Microphones & Loudspeakers</h2>
+                                <p>Weeks 47-54 • How we record and play sound</p>
                             </div>
                         </div>
                         <span class="chevron">▼</span>
                     </summary>
                     <div class="phase-content">
-                        <p style="color:#a0a0a0; margin-bottom:1.5rem;">DSP is the practical culmination of everything before it — maths, physics, and electronics converge into algorithms you can write and run. By the end of this phase you'll have built working audio tools in Python and on microcontrollers.</p>
-                        <details class="module-details"><summary>6.1 Sampling, Nyquist, and Digital Audio</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>The sampling theorem, aliasing, quantisation, bit depth, anti-aliasing filters. Why 44.1 kHz? Why 16-bit gives 96 dB dynamic range. Demonstrations of aliasing you can hear.</p></div></div></details>
-                        <details class="module-details"><summary>6.2 Convolution and Impulse Responses</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>Convolution as the fundamental operation of LTI systems. Recording impulse responses. Convolution reverb — placing any recording inside any space. The connection between convolution in time and multiplication in frequency.</p></div></div></details>
-                        <details class="module-details"><summary>6.3 Digital Filters — FIR and IIR</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>FIR filters (always stable, linear phase). IIR filters (efficient, can ring). The biquad as the universal audio building block. Robert Bristow-Johnson's Audio EQ Cookbook. Building a parametric EQ in Python.</p></div></div></details>
-                        <details class="module-details"><summary>6.4 Room Correction DSP</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>Measurement-based EQ. Inverting the room response. Minimum phase vs linear phase correction. Target curves (Harman). Why you can't fix everything with DSP. Using REW to generate correction filters.</p></div></div></details>
-                        <details class="module-details"><summary>6.5 Real-Time DSP on Microcontrollers</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>The Teensy 4.0 and its Audio Library. Sample-by-sample processing. Implementing a biquad EQ in real-time. Latency, buffer sizes, and the constraints of embedded audio.</p></div></div></details>
+                        <div class="coming-soon">
+                            <h3>Phase 6 - Coming Soon</h3>
+                            <p>This phase covers microphone types, loudspeaker design, and transducer characteristics.</p>
+                        </div>
                     </div>
                 </details>
             </div>
 
-            <!-- PHASE 7 -->
             <div class="phase">
                 <details class="phase-details">
                     <summary>
                         <div class="phase-title">
                             <div class="phase-number">7</div>
                             <div class="phase-title-text">
-                                <h2>Psychoacoustics</h2>
-                                <p>Weeks 69–76 • How the brain turns pressure waves into the experience of sound</p>
+                                <h2>Psychoacoustics: How We Hear</h2>
+                                <p>Weeks 55-62 • The human ear and perception</p>
                             </div>
                         </div>
                         <span class="chevron">▼</span>
                     </summary>
                     <div class="phase-content">
-                        <p style="color:#a0a0a0; margin-bottom:1.5rem;">The ear and brain are the final link in every acoustic chain. Understanding perception explains why we use A-weighting, why MP3 compression works, why concert halls sound different from recordings, and why two people in the same room can disagree about what they hear.</p>
-                        <details class="module-details"><summary>7.1 How We Hear</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>Outer, middle, and inner ear anatomy. The basilar membrane as a biological frequency analyser. Critical bands — the ear's built-in filter bank. Tonotopic mapping. Hair cells and neural encoding.</p></div></div></details>
-                        <details class="module-details"><summary>7.2 Loudness, Pitch, and Timbre Perception</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>Equal-loudness contours (Fletcher-Munson / ISO 226). Phons and sones. The mel scale for pitch. Missing fundamental — hearing a pitch that isn't physically present. How timbre emerges from harmonic structure.</p></div></div></details>
-                        <details class="module-details"><summary>7.3 Masking and Auditory Scene Analysis</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>Simultaneous and temporal masking. How MP3/AAC exploit masking to compress audio. The cocktail party effect — how the brain separates overlapping sources. Streaming and grouping in perception.</p></div></div></details>
-                        <details class="module-details"><summary>7.4 Spatial Hearing and Localisation</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>Interaural Time Difference (ITD), Interaural Level Difference (ILD), and pinna cues. Head-Related Transfer Functions (HRTFs). Why stereo works, how surround sound works, and how binaural audio can place sounds inside your head.</p></div></div></details>
+                        <div class="coming-soon">
+                            <h3>Phase 7 - Coming Soon</h3>
+                            <p>This phase explores how the human auditory system works and how we perceive sound.</p>
+                        </div>
                     </div>
                 </details>
             </div>
 
-            <!-- PHASE 8 -->
             <div class="phase">
                 <details class="phase-details">
                     <summary>
                         <div class="phase-title">
                             <div class="phase-number">8</div>
                             <div class="phase-title-text">
-                                <h2>Environmental &amp; Industrial Noise</h2>
-                                <p>Weeks 77–84 • Measuring, predicting, and controlling unwanted sound</p>
+                                <h2>Advanced Measurement and Analysis</h2>
+                                <p>Weeks 63-70 • Professional measurement techniques</p>
                             </div>
                         </div>
                         <span class="chevron">▼</span>
                     </summary>
                     <div class="phase-content">
-                        <p style="color:#a0a0a0; margin-bottom:1.5rem;">Noise control is one of the largest professional applications of acoustics. This phase covers the measurement standards, legislation, and engineering solutions used to protect people from harmful or annoying noise — from motorway barriers to factory enclosures.</p>
-                        <details class="module-details"><summary>8.1 Noise Measurement and Assessment</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>Leq, Lmax, L90, Lden — the statistical descriptors. Octave and third-octave band analysis. Frequency weighting curves (A, C, Z). Sound level meters and calibration. Measurement standards (BS 4142, BS 8233).</p></div></div></details>
-                        <details class="module-details"><summary>8.2 Noise Legislation and Standards</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>WHO guidelines, UK planning policy (NPPF/PPG Noise), BS 8233 internal noise levels, workplace noise regulations. How noise impact assessments work in practice.</p></div></div></details>
-                        <details class="module-details"><summary>8.3 Noise Control Engineering</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>The source-path-receiver model. Barriers (insertion loss calculations), enclosures, silencers, vibration isolation mounts. Active noise control principles. Cost-effective noise reduction strategies.</p></div></div></details>
-                        <details class="module-details"><summary>8.4 Environmental Noise Prediction</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>Propagation models (ISO 9613-2), ground effect, atmospheric absorption, meteorological effects. Noise mapping software (CadnaA, SoundPLAN concepts). Traffic, railway, and industrial noise prediction.</p></div></div></details>
+                        <div class="coming-soon">
+                            <h3>Phase 8 - Coming Soon</h3>
+                            <p>This phase covers advanced measurement techniques and professional acoustic analysis.</p>
+                        </div>
                     </div>
                 </details>
             </div>
 
-            <!-- PHASE 9 -->
             <div class="phase">
                 <details class="phase-details">
                     <summary>
                         <div class="phase-title">
                             <div class="phase-number">9</div>
                             <div class="phase-title-text">
-                                <h2>Vibration &amp; Structural Acoustics</h2>
-                                <p>Weeks 85–92 • When sound travels through solids, not air</p>
+                                <h2>Designing Acoustic Systems</h2>
+                                <p>Weeks 71-78 • Putting it all together</p>
                             </div>
                         </div>
                         <span class="chevron">▼</span>
                     </summary>
                     <div class="phase-content">
-                        <p style="color:#a0a0a0; margin-bottom:1.5rem;">Structure-borne sound is why you can hear your neighbour's footsteps through the floor and why machine vibration creates noise in adjacent rooms. Vibration theory also underpins modal analysis — a core technique in automotive, aerospace, and architectural acoustics.</p>
-                        <details class="module-details"><summary>9.1 Fundamentals of Vibration</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>The single degree of freedom (SDOF) oscillator — mass, spring, damper. Natural frequency, resonance, damping ratio. Free and forced vibration. Transmissibility and isolation. The SDOF system is to vibration what the sine wave is to acoustics.</p></div></div></details>
-                        <details class="module-details"><summary>9.2 Multi-DOF Systems and Modal Analysis</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>Multiple coupled oscillators. Mode shapes and natural frequencies of continuous structures (beams, plates). Frequency Response Functions (FRFs). Experimental modal analysis with accelerometers and impact hammers.</p></div></div></details>
-                        <details class="module-details"><summary>9.3 Structure-Borne Sound</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>How vibration becomes airborne sound. Flanking transmission in buildings. Vibration isolation mounts — spring selection, natural frequency targeting. Floating floors, resilient bars, and decoupled constructions.</p></div></div></details>
+                        <div class="coming-soon">
+                            <h3>Phase 9 - Coming Soon</h3>
+                            <p>This phase brings together all previous knowledge to design complete acoustic systems.</p>
+                        </div>
                     </div>
                 </details>
             </div>
 
-            <!-- PHASE 10 -->
             <div class="phase">
                 <details class="phase-details">
                     <summary>
                         <div class="phase-title">
                             <div class="phase-number">10</div>
                             <div class="phase-title-text">
-                                <h2>Computational Acoustics</h2>
-                                <p>Weeks 93–100 • Simulating sound with computers</p>
+                                <h2>Masters-Level Projects</h2>
+                                <p>Weeks 79-96+ • Original research and application</p>
                             </div>
                         </div>
                         <span class="chevron">▼</span>
                     </summary>
                     <div class="phase-content">
-                        <p style="color:#a0a0a0; margin-bottom:1.5rem;">Modern acoustics increasingly relies on computer simulation. Ray tracing predicts room behaviour, FEM models complex vibrating structures, and BEM solves radiation and scattering problems. This phase introduces the concepts and tools — not to make you a developer, but to make you an informed user of simulation software.</p>
-                        <details class="module-details"><summary>10.1 Ray Tracing and Geometric Acoustics</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>Sound as rays at high frequencies. Specular and diffuse reflections. Image source method. Software tools (CATT-Acoustic, Odeon concepts). When ray tracing works and when it doesn't (below Schroeder frequency).</p></div></div></details>
-                        <details class="module-details"><summary>10.2 Finite Element Method for Acoustics</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>Discretising a continuous domain into elements. Meshing, boundary conditions, solving the Helmholtz equation numerically. When to use FEM (enclosed spaces, low frequencies, coupled structural-acoustic problems). Free tools (FEniCS, Elmer).</p></div></div></details>
-                        <details class="module-details"><summary>10.3 Boundary Element Method</summary><div class="module-content"><div class="coming-soon"><h3>Full lesson coming soon</h3><p>BEM for exterior radiation and scattering problems. Advantages over FEM for open-domain problems (no need to mesh air). Speaker radiation modelling, barrier diffraction, head-related transfer function computation.</p></div></div></details>
-                    </div>
-                </details>
-            </div>
-
-            <!-- CAPSTONE -->
-            <div class="phase">
-                <details class="phase-details">
-                    <summary>
-                        <div class="phase-title">
-                            <div class="phase-number" style="background: linear-gradient(135deg, #f7a14a, #e25f7a);">★</div>
-                            <div class="phase-title-text">
-                                <h2>Capstone Project</h2>
-                                <p>Weeks 100+ • Design, build, measure, correct — prove your mastery</p>
-                            </div>
+                        <div class="coming-soon">
+                            <h3>Phase 10 - Coming Soon</h3>
+                            <p>This phase guides you through completing independent projects at a Masters level.</p>
                         </div>
-                        <span class="chevron">▼</span>
-                    </summary>
-                    <div class="phase-content">
-                        <p style="color:#a0a0a0; margin-bottom:1.5rem;">The capstone is not a test — it's a demonstration to yourself and others that the knowledge is real and usable. Choose a project that combines multiple phases, document it as a technical report, and present your findings with measurements.</p>
-                        <details class="module-details"><summary>Option A: Complete Room Acoustic Design</summary><div class="module-content"><div class="lesson-block concept"><h3>📖 Project Scope</h3><p>Full acoustic audit of a real space using REW. Identify problems (modes, excessive RT60, poor insulation). Design and implement treatment. Measure before and after. Write up the physics behind every decision. Include: frequency response plots, RT60 analysis, waterfall plots, treatment design calculations (Sabine), and subjective listening evaluation.</p></div></div></details>
-                        <details class="module-details"><summary>Option B: Loudspeaker System Design</summary><div class="module-content"><div class="lesson-block concept"><h3>📖 Project Scope</h3><p>Design a 2-way loudspeaker system from driver selection through to crossover design, enclosure modelling (Thiele-Small), and DSP correction. Simulate in LTspice and/or Python. If budget allows, build the enclosure and crossover. Measure the result with REW and compare to simulation predictions.</p></div></div></details>
-                        <details class="module-details"><summary>Option C: Environmental Noise Assessment</summary><div class="module-content"><div class="lesson-block concept"><h3>📖 Project Scope</h3><p>Conduct a noise impact assessment for a real or hypothetical development. Measure baseline noise levels, predict noise from the proposed source using ISO 9613-2, assess against BS 4142 and BS 8233 criteria, and propose mitigation measures with predicted effectiveness.</p></div></div></details>
-                        <details class="module-details"><summary>Option D: DSP Audio Processing Pipeline</summary><div class="module-content"><div class="lesson-block concept"><h3>📖 Project Scope</h3><p>Build a complete audio processing chain in Python and/or on a Teensy microcontroller. Include: real-time FFT analysis, parametric EQ (using biquad filters from the Audio EQ Cookbook), convolution reverb, and room correction based on your own measurements. Document the DSP theory behind each stage.</p></div></div></details>
                     </div>
                 </details>
             </div>
 
         </section>
-
     </main>
-
 </body>
 </html>
